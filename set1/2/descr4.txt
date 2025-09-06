@@ -1,0 +1,3 @@
+A libary is not really a object module, 
+it is more a collection of object modules that are pre compiled definitions 
+and are ready to use for the linking process.
