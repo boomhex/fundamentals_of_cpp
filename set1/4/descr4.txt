@@ -4,4 +4,4 @@
 ^\s+E?SSID:"([[:print:]]+)"
 ^\s+ssid="([[:print:]]+)"
 
-- You cannot use the form R"(...)" in the RSL, when the string you want to use contains the sequence )". So in this case you could use the form R"delimiter(...)delimiter"
+- You cannot use the form R"(...)" in the RSL, when the sequence )" is in your string. So in this case you could use the form R"delimiter(...)delimiter"
