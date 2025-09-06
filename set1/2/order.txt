@@ -1,0 +1,5 @@
+-descr1.txt
+-descr2.txt
+-descr3.txt
+-descr4.txt
+-descr5.txt

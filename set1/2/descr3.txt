@@ -1,0 +1,2 @@
+When a compiler creates a program, it uses header files and libraries in different parts of the construction process.
+It uses the header file during compilation for types and syntax and it uses libariaries during the linking process.
