@@ -1,0 +1,7 @@
+- The output of the main.cc program in this folder:
+>>>^\s+Encryption key:(\w+)
+^\s+Quality=(\d+)
+^\s+E?SSID:"([[:print:]]+)"
+^\s+ssid="([[:print:]]+)"
+
+- You cannot use the form R"(...)" in the RSL, when the string you want to use contains the sequence )". So in this case you could use the form R"delimiter(...)delimiter"
