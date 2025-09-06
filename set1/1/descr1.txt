@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 - To compile the program we used the command:
 g++-15 --std=c++26 -Wall -Werror -c hello.cc -o hello.o
 
