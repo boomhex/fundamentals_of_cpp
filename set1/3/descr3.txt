@@ -1,0 +1,4 @@
+Strict type checking
+
+C++ Requires prototypes before use, and mismatched or undeclared calls are compile-time errors.
+C has weaker checking; older C allowed undeclared functions (assumed int), often compiling with warnings.
