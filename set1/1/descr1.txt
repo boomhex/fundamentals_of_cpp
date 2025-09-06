@@ -1,0 +1,5 @@
+1.
+
+2. g++-15 -Wall -Werror -c hello.cc -o hello.o       # compile to object file
+g++-15 -Wall -Werror -s hello.o -o hello          # link and strip to create executable
+./hello > out                       # run program, redirect output to file "out"
