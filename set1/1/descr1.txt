@@ -1,0 +1,17 @@
+- To compile the program we used the command:
+g++-15 --std=c++26 -Wall -Werror -c hello.cc -o hello.o
+
+- Then to link the program we used:
+g++-15 --std=c++26 -Wall -Werror -s -o hello hello.o
+
+- A description of the object file and the executable:
+The object file is created after running the first compilation command: "g++-15 --std=c++26 -Wall -Werror -c hello.cc -o hello.o". It contains machine code, but is not runnable. It contains external references and definitions e.g. functions that might be from another file. In the executable these references and definitions are resolved such that they are combined ("linked") in one executable file.
+
+- The programs output:
+>>>Hello World
+
+- The size in bytes of the requested files are:
+source file: hello.cc - 101B
+object file: hello.o - 1848B
+executable object: hello - 33785
+the file iostream: iostream - 3125
