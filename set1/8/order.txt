@@ -1,8 +1,8 @@
 descr1.txt
 main.cc
-out32.txt
-out28.txt
-out24.txt
-out20.txt
-out16.txt
+out32
+out28
+out24
+out20
+out16
 descr2.txt

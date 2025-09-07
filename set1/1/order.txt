@@ -1,3 +1,3 @@
 hello.cc
 descr1.txt
-out.txt
+out
