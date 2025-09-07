@@ -16,7 +16,9 @@ Escape sequences	Meaning
 \nnn 				octal value (replace nn with value)
 \r 					carriage return
 
-- If another unrecognized character is used as an escape sequence i.e. using a backslash in the string, it is treated as a normal character. So if my cout statement is:
+- If another unrecognized character is used as an escape sequence i.e. using a
+backslash in the string, it is treated as a normal character. So if my cout
+statement is:
 std::cout << "We\qare Timo and Ruben.\n"
 The output will generate:
 Weqare Timo and Ruben
