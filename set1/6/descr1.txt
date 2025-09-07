@@ -1,0 +1,4 @@
+This program has 6 different ways of determinining 
+whether the variable that was just extracted from cin is either odd or even.
+
+In the example out file the number 4738 was used as an input.
