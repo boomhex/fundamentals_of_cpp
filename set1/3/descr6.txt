@@ -1,4 +1,4 @@
-Functions as part of a struct
+- Functions as part of a struct
 
 In C++ a struct can contain both data and member functions, 
 enabling object-like behavior.

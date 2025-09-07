@@ -1,1 +1,1 @@
-The program outputs: 129.125.3.160 for input: 129 125 3 162 28
+- The program outputs: 129.125.3.160 for input: 129 125 3 162 28

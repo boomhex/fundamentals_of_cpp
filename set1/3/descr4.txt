@@ -1,4 +1,4 @@
-NULL-pointers vs. 0-pointers and nullptr
+- NULL-pointers vs. 0-pointers and nullptr
 
 C++ uses 0 or (since C++11) nullptr, which safely disambiguates 
 between integer 0 and pointer values.

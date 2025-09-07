@@ -1,2 +1,2 @@
-The Header files are used to share declarations between different files. 
+- The Header files are used to share declarations between different files. 
 The header file is there so the compiler knows where the declarations are.

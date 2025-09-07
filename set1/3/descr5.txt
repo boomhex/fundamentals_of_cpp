@@ -1,4 +1,4 @@
-Default function arguments
+- Default function arguments
 
 C++ allows default values in declarations, letting callers omit 
 trailing parameters.

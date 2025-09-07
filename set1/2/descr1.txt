@@ -1,4 +1,4 @@
-The difference between a declaration and a definition is that a 
+- The difference between a declaration and a definition is that a 
 declaration can be changed and a definition cannot be changed. 
 Also, a declaration has no allocated storage, 
 while a definitions has allacated storage.
