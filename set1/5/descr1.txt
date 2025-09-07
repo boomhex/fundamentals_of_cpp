@@ -1,20 +1,20 @@
 - Escape sequences are special characters that you cannot type normally like tabs or newlines.
 - These are the standard ones defined by c++:
-Escape sequences	Meaning
-\n 					newline
-\t 					tab
-\' 					single quote
-\b 					backspace
-\" 					double quote
-\\ 					backslash
-\v 					vertical tab
-\0 					null value
-\xhh 				hexidecimal value (replace hh with value)
-\a 					'audible bell', some sound on my laptop
-\? 					question mark
-\f 					form feed
-\nnn 				octal value (replace nn with value)
-\r 					carriage return
+Escape sequences    Meaning
+\n                  newline
+\t                  tab
+\'                  single quote
+\b                  backspace
+\"                  double quote
+\\                  backslash
+\v                  vertical tab
+\0                  null value
+\xhh                hexidecimal value (replace hh with value)
+\a                  'audible bell', some sound on my laptop
+\?                  question mark
+\f                  form feed
+\nnn                octal value (replace nn with value)
+\r                  carriage return
 
 - If another unrecognized character is used as an escape sequence i.e. using a
 backslash in the string, it is treated as a normal character. So if my cout
