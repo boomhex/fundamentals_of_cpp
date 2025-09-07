@@ -1,4 +1,5 @@
 Function overloading
 
-C++ supports functions with the same name but different parameter lists (or const qualifiers), resolved via name mangling.
+C++ supports functions with the same name but different parameter 
+lists (or const qualifiers), resolved via name mangling.
 While C Function names must be unique; overloading is not possible.

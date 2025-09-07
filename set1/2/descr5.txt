@@ -1,3 +1,5 @@
 The reason that after compiling a source that contains int main() 
-doesn't give an executable is that after compiling into a object file it doesnt have the nessesary linking, 
-such as runtime or start up sequence. only ofter the linking it becomes an executable
+doesn't give an executable is that after compiling into a 
+object file it doesnt have the nessesary linking, 
+such as runtime or start up sequence. 
+only ofter the linking it becomes an executable

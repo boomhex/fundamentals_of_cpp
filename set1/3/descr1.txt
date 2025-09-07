@@ -1,4 +1,6 @@
 The function ‘main’
 
-In C++, only int main() and int main(int argc, char** argv) are valid; it must return int (with implicit return 0; if omitted), and cannot be overloaded.
+In C++, only int main() and int main(int argc, char** argv) are valid; 
+it must return int (with implicit return 0; if omitted), 
+and cannot be overloaded.
 C also uses int main, but you can also use void main()

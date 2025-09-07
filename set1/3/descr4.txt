@@ -1,4 +1,6 @@
 NULL-pointers vs. 0-pointers and nullptr
 
-C++ uses 0 or (since C++11) nullptr, which safely disambiguates between integer 0 and pointer values.
-C uses the macro NULL (often defined as (void*)0), which may cause confusion in overloaded contexts.
+C++ uses 0 or (since C++11) nullptr, which safely disambiguates 
+between integer 0 and pointer values.
+C uses the macro NULL (often defined as (void*)0), which may cause 
+confusion in overloaded contexts.

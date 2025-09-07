@@ -1,4 +1,6 @@
 Functions as part of a struct
 
-In C++ a struct can contain both data and member functions, enabling object-like behavior.
-While in C a struct can only contain data; functions must be defined separately.
+In C++ a struct can contain both data and member functions, 
+enabling object-like behavior.
+While in C a struct can only contain data; 
+functions must be defined separately.

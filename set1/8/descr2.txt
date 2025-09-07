@@ -1,0 +1,5 @@
+The reason why the ladt 2 inputs(20 & 16) give the same output is
+because with 20 you keep the first 20 bits and zero the last 12 bits.
+This is already enough to make it 129.125.0.0, since 3 is 00000011.
+With 16 the program zeros the last 16 bits, which is more but it 
+is already zero so the output is the same

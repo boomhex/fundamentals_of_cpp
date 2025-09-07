@@ -1,0 +1,4 @@
+The program reads five command-line arguments: 
+four octets of an IPv4 address and one netmask length (0–32).
+It builds a 32-bit integer ip4 in one initialization expression by shifting 
+the octets into place, combining them, and immediately applying the netmask.

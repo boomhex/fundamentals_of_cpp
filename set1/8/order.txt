@@ -1,0 +1,8 @@
+descr1.txt
+main.cc
+out32
+out28
+out24
+out20
+out16
+descr2.txt
