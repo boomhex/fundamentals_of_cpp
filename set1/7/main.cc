@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-										// Use namespace std so I don't have
+                                        // Use namespace std so I don't have
 using namespace std;					// to type it and avoid long lines.
 
 int main(int argc, char* argv[])
