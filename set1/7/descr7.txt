@@ -1,0 +1,5 @@
+- To call the program s.t. it displays the first argument other than only      
+specifying a single argument, you have can use the index as the first
+argument. Calling ./a.out 1 arg1 arg2 would result in an output of hello 1.
+This way the program displays the first argument without specifying just a
+single argument.
