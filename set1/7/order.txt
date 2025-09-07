@@ -1,2 +1,2 @@
 main.cc
-descr7.txt
+descr1.txt
