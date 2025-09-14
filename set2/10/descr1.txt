@@ -1,0 +1,7 @@
+This program reads a full line of text from the user and removes any leading
+ or trailing blanks (spaces or tabs). It does this by finding the first and
+  last non-blank characters in the string. The cleaned-up text is 
+  then displayed between a backquote (`) at the start 
+  and a single quote (’) at the end. This way, 
+  only the meaningful content of the input is shown without 
+  surrounding whitespace.

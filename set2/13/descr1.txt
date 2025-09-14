@@ -1,0 +1,36 @@
+-  If first is not equal to test1 then nothing happens
+if first is equal to test and second is equal test2 
+then the value is set to 5
+if first is equal to test and second is not equal test2 
+then the value is set to 6
+
+- 
+if (first == test1) 
+    if (second == test2) 
+        value = 5; 
+    else 
+        value = 6;
+
+- by adding brackets, the interpertation can be changed. 
+if (first == test1)
+{
+    if (second == test2) 
+        value = 5; 
+}
+else 
+{
+    value = 6;
+}
+
+- if first is not equal to test1 then value is 6
+if first is equal to test and second is equal test2 
+then the value is set to 5
+if first is equal to test and second is not equal test2 
+then nothing happens
+
+- A flaw in the original statement can be that the variable "value" is 
+not set if first is not equal to test1.
+This can result in an uninitialized value.
+
+To solve it you can either give "value" a value before the if-statement.
+or add an else-statement after the first else-statement.

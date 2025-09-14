@@ -1,0 +1,6 @@
+This program checks if a given number is divisible by 3. 
+It does so by summing the digits of the number repeatedly until 
+only a single digit remains. If that final digit is 3, 6, or 9, 
+the number is divisible by 3; otherwise, it is not. The program works on 
+very large numbers by treating the input as a string 
+instead of relying on numeric types.
