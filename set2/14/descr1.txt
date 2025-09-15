@@ -1,0 +1,9 @@
+This program computes the square root of a user-provided 
+positive number using Newton’s iterative method.
+
+It starts with an initial guess (x0 = 1) and repeatedly updates 
+the estimate (x1) with the given formula
+
+until the estimate stabilizes (x0 == x1). During each step, 
+it prints the iteration number, the current estimates, and their squares.
+When the loop ends, it displays the final approximation of the square root.

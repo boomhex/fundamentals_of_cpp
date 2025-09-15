@@ -1,0 +1,2 @@
+This program reads text line by line from standard input and 
+outputs each line reversed, while keeping UTF-8 characters intact.

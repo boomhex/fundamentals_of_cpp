@@ -1,4 +1,5 @@
--  If first is not equal to test1 then nothing happens
+-  How the compiler interprets this statement is as follows:
+If first is not equal to test1 then nothing happens
 if first is equal to test and second is equal test2 
 then the value is set to 5
 if first is equal to test and second is not equal test2 
