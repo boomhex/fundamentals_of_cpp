@@ -1,2 +1,2 @@
 descr1.txt
-main.ccx
+main.cc
