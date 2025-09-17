@@ -1,0 +1,2 @@
+This program takes in an integer, and then prints the binary, and summation of
+the powers of 2 for that number.

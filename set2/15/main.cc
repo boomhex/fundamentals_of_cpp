@@ -2,25 +2,23 @@
 
 using namespace std;					// omit std::
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
-	++argv;								// skip program name
-	--argc;								// decrement to skip program name
-	int nElements = argc;				// elements are equal to extra args now
-	int totalCombinations = 1 << nElements;	// 2^elements to get amount of comb
+    ++argv;								// skip program name
+    --argc;								// decrement to skip program name
+    size_t nElements = argc;		    // elements are equal to extra args
+    size_t totalCombinations = 1 << nElements;	// get amount of combinations
 
-	for (int nthCombination = 0;
-		 nthCombination < totalCombinations;
-		 ++nthCombination)
-	{
-		cout << nthCombination << ": ";
-		for (int idx = 0; idx != nElements; ++idx)
-		{
-			if (nthCombination & (1 << idx)) // Use bit repr to see if the arg
-			{								 // has to be printed.
-				cout << argv[idx] << " ";
-			}
-		}
-		cout << "\n";
-	}
+    for (size_t nthCombination = 0;
+         nthCombination != totalCombinations;
+         ++nthCombination)
+    {
+        cout << (nthCombination + 1)<< ": ";
+        for (size_t idx = 0; idx != nElements; ++idx)
+        {
+            if (nthCombination & (1 << idx)) // use bit repr to check if
+                cout << argv[idx] << " ";    // arg has to be printed.
+        }
+        cout << "\n";
+    }
 }

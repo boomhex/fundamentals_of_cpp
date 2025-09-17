@@ -1,0 +1,4 @@
+This program takes arguments when called, to then print them in all
+combinations. Since there are n_args^2 combinations, it does
+this by looping a counter until n_args^2, and printing the nth arg for
+the nth set bits for each encountered number.

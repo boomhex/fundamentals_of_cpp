@@ -1,1 +1,3 @@
-Output when processing flow.txt:
+This program goes through some input text, and counts the number of a, e and i
+in that text. It outputs the counts in the format:
+# a-chars: #-a, # e-chars: #-e, # i-chars: #-i

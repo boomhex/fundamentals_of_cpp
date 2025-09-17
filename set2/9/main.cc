@@ -3,24 +3,26 @@
 
 using namespace std;                        // allows to omit std::
 
-int main(int argc, char* argv[])
+int main()
 {
-    int aCount = 0;                         // initialize counters
-    int eCount = 0;
-    int iCount = 0;
+    int aCount = 0, eCount = 0, iCount= 0;  // initialize counters
 
-    for (string line; getline(cin, line);)  // loop through lines input stream
+    string line;                            // initialize a string
+    while(getline(cin, line))               // loop through lines input stream
     {
-        for (auto &character: line)
+        for (int idx = 0; idx != line.length(); idx++)
         {
-            switch (tolower(character))     // lowercase char to find uppercase
+            switch (tolower(line[idx]))     // lowercase char to find uppercase
             {
                 case 'a':                   // increment when char is found
                     ++aCount;
+                break;
                 case 'e':
                     ++eCount;
+                break;
                 case 'i':
                     ++iCount;
+                break;
             }
         }
     }
