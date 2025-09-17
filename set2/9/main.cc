@@ -10,7 +10,7 @@ int main()
     string line;                            // initialize a string
     while(getline(cin, line))               // loop through lines input stream
     {
-        for (int idx = 0; idx != line.length(); idx++)
+        for (size_t idx = 0; idx != line.size(); idx++)
         {
             switch (tolower(line[idx]))     // lowercase char to find uppercase
             {
