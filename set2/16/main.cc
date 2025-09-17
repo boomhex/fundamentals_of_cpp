@@ -1,35 +1,19 @@
 #include <iostream>
 #include <string>
 
-using namespace std;                        // allows to omit std::
+using namespace std;
 
-int main(int argc, char* argv[])
-{
-    for (string line; getline(cin, line);)  // loop through lines input stream
+int main() {
+    for (string line; getline(cin, line); )                 // get input
     {
-        
-        size_t currentIndex = line.size();  // start index
-        size_t j = currentIndex - 1;        // size of character
-        // loop through all character from end to start
-        for (auto from = line.crbegin(), to = line.crend(); 
-            from != to; ++from)
-        {
-            if ((*from & 0x80) == 0x00)     // single byte
+        size_t currentIndex = line.size();                  // start index
+        for (size_t j = line.size(); j > 0; j--)            // loop chars
+        {         
+            // check if it is not a continuation byte
+            if ((line[j] & 0xC0) != 0x80)                   
             {
-                cout << *from;              // print char
+                cout << line.substr(j, currentIndex - j);   // print UTF-8   
                 currentIndex = j;
-                j = j - 1;
-            } 
-            else if ((*from & 0xC0) == 0x80)// multi-char code point
-            {  
-                j--;                         
-            }
-            else
-            {
-                // print all bytes for current character
-                cout << line.substr(j, currentIndex - j);
-                currentIndex = j;
-                j--;
             }
         }
         cout << '\n';

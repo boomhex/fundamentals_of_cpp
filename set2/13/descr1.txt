@@ -29,9 +29,11 @@ then the value is set to 5
 if first is equal to test and second is not equal test2 
 then nothing happens
 
-- A flaw in the original statement can be that the variable "value" is 
-not set if first is not equal to test1.
-This can result in an uninitialized value.
+- The problem is that it’s not clear which if the else belongs to. 
+The compiler will always attach the else to the closest if, 
+but when you read the code it looks like it might belong to the outer if. 
+That makes the code confusing and easy to misinterpret.
 
-To solve it you can either give "value" a value before the if-statement.
-or add an else-statement after the first else-statement.
+To fix this problem you should always use braces {} to show clearly which if 
+the else is paired with. That way both the compiler 
+and anyone reading the code see the same meaning.
