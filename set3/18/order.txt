@@ -1,0 +1,12 @@
+descr1.txt
+main.ih
+descr2.txt
+combine.cc
+descr3.txt
+printresult.cc
+descr4.txt
+structcall.cc
+descr5.txt
+boundcall.cc
+descr6.txt
+main.cc

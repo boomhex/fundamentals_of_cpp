@@ -1,0 +1,3 @@
+This function prints the result from a program call that was done in
+good order. It is one argument, but it improves readability and shortens
+the code in multiple locations.

@@ -1,0 +1,21 @@
+#ifndef MAIN_IH
+#define MAIN_IH
+
+#include <string>
+
+using namespace std;
+
+struct ReturnValues
+{
+    bool ok = false;          // true if requested arg exists
+    size_t nr = 0;        // requested argument number
+    string value = ""; // requested argument value or empty string
+};
+
+// Function prototypes
+ReturnValues combine(int argc, char **argv);
+bool structCall(int argc, char **argv);
+void boundCall(int argc, char **argv);
+void printResult(ReturnValues result);
+
+#endif

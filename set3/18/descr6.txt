@@ -1,0 +1,3 @@
+The main() function combines previous functions to create a working program.
+It passes the command-line arguments to structCall() first. It returns 0 if
+structCall returns false, and that terminates the program normally.
