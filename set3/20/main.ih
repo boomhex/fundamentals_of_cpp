@@ -1,0 +1,5 @@
+#include <cstddef>      // for size_t
+
+size_t countChars();    // countchars.cc
+size_t countWords();    // countwords.cc
+size_t countLines();    // countlines.cc
