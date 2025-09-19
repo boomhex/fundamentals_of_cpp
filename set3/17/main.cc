@@ -1,27 +1,8 @@
 #include <iostream>
 #include <string>
+#include "sum.h"
 
 using namespace std;                        // allows to omit std::
-
-int sum(int argc, char *argv[], int)
-{
-    int total = 0;
-    for (int idx = 1; idx < argc; idx++)
-    {
-        total += stoi(argv[idx]);
-    }
-    return total;
-}
-
-double sum(int argc, char *argv[], double)
-{
-    double total = 0.0;
-    for (int idx = 1; idx < argc; ++idx)
-    {
-        total += stod(argv[idx]);
-    }
-    return total;
-}
 
 int main(int argc, char *argv[])
 {
