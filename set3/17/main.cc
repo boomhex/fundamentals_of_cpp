@@ -7,7 +7,7 @@ using namespace std;                        // allows to omit std::
 int main(int argc, char *argv[])
 {
     size_t hasDot = false;
-    for (int idx = 1; idx < argc; ++idx)
+    for (size_t idx = 1; idx < argc; ++idx)
     {
         string arg = argv[idx];
         if (arg.find('.') != string::npos) 
