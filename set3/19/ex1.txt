@@ -1,0 +1,7 @@
+It is appropriate to use an int-type parameter when the function needs a 
+small whole number, that is passed as a copy and when the function 
+does not need to change the value.
+
+int multiply(int number1, int number2)
+
+In the code example this is illustrated because
