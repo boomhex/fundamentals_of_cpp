@@ -1,3 +1,7 @@
+It is not appropriate to define a const reference to an int-type parameter
+because an int is a built-in type. Handling the actual type is faster than
+handling a built-in type. So that is therefore the preferred alternative.
 
-
-In the code example this is illustrated because
+In the code example this is illustrated where one function shows the non-
+preferred way and one shows the preferred implementation of defining and
+int-type parameter.

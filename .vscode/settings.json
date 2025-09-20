@@ -4,6 +4,9 @@
         "__locale": "cpp",
         "ios": "cpp",
         "bitset": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "unordered_map": "cpp",
+        "algorithm": "cpp",
+        "format": "cpp"
     }
 }

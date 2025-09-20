@@ -1,3 +1,6 @@
+It is appropriate to use a non-const reference to an int-type parameter
+when a function needs to modify the int-type in-place from the locations
+where the function is called.
 
-
-In the code example this is illustrated because
+In the code example this is illustrated because it changes a int-type
+parameter to its absolute value in-place from where it is called.

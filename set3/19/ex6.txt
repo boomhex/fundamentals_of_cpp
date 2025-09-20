@@ -1,3 +1,7 @@
+It is appropriate to use a non-const reference to a std::string type
+parameter when a function needs to change the string in place, and no
+copy is needed.
 
-
-In the code example this is illustrated because
+In the code example this is illustrated because the string is altered
+without creating a complete copy. The characters are changed to lowercase
+in-place.
