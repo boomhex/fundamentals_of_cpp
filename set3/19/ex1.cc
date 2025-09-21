@@ -1,16 +1,4 @@
-#include <iostream>
-
-using namespace std;
-
-int factorial(int n)
+int multiplyIntegers(int number1, int number2)
 {
-    int result = 1;
-    for (int i = 2; i <= n; ++i)
-        result *= i;
-    return result;
-}
-
-int main()
-{
-    cout << "factorial(5) = " << factorial(5) << '\n';
+    return number1 * number2;
 }

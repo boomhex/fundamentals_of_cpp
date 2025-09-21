@@ -1,3 +1,7 @@
+It is appropriate to use a const reference to a std::string parameter when
+a function does not need to modify the std::string object, and you do not
+want to make a more memory expensive copy of the string.
 
-
-In the code example this is illustrated because
+In the code example this is illustrated because the function does not need
+to copy the whole string in order to display it. It can do perfectly fine,
+and is more efficient in handling large texts.

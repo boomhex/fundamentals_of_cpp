@@ -1,7 +1,14 @@
 ex1.txt
+ex1.cc
 ex2.txt
+ex2.cc
 ex3.txt
+ex3.cc
 ex4.txt
+ex4.cc
 ex5.txt
+ex5.cc
 ex6.txt
+ex6.cc
 ex7.txt
+ex7.cc

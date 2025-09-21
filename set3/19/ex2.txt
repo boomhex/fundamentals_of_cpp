@@ -1,3 +1,7 @@
+It is appropriate to define a std::string parameter when a function needs
+to use string type parameters, and their built-in member functions, that
+are in the std::string class.
 
-
-In the code example this is illustrated because
+In the code example this is illustrated because the function takes a
+std::string type parameter as an input, and uses a built in member
+function in the for loop to loop through the characters in the sentence.
