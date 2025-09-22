@@ -6,6 +6,10 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
+    if (argc < 2) 
+    {
+        return 0;
+    }
     if (argc == 3)
         srandom(strtoul(argv[2], nullptr, 10));
     else
@@ -13,23 +17,21 @@ int main(int argc, char *argv[])
 
     size_t population = strtoul(argv[1], nullptr, 10);
 
-    size_t numberOfBrown = random() % (population + 1);
+    size_t const numberOfBrown = random() % (population + 1);
     cout << "the number of brown eyes: " << numberOfBrown << '\n';
 
-    size_t people[population] = {};
-    for (size_t idx = 0; idx < population; ++idx)
+    size_t people[population];
+    for (size_t idx = 0; idx != population; ++idx)
         people[idx] = idx + 1;
     
 
-    size_t count = 1;
-    while (population != 0)
+    for (size_t count = 1; population != 0; ++count)
     {
-        size_t rand = random() % population;
+        size_t pick = random() % population;
         cout << count << ": "
              << (count <= numberOfBrown ? "brown (" : "blue (")
-             << people[rand] << ")\n";
-        people[rand] = people[population-1];
+             << people[pick] << ")\n";
+        people[pick] = people[population-1];
         --population;
-        ++count;
     }
 }
