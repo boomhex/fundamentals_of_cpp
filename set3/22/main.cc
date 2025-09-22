@@ -1,9 +1,6 @@
 #include <iostream>
-#include <string>
-#include <vector>
-#include <random>
-#include <algorithm>
 #include <cstdlib>   // strtoul
+#include <ctime>
 
 using namespace std;
 
