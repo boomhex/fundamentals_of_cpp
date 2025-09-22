@@ -1,0 +1,8 @@
+15:
+It is appropriate to return a non-const reference to an int-type parameter
+if the variable that called the function needs to be able to mutate a member
+of for example a struct.
+
+This is illustrated in the code example because the value inside the struct
+can be changed by the valueReference variable in the main function directly,
+after receiving the reference return value from the &accessValue() function.

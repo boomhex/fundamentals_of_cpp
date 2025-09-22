@@ -1,3 +1,4 @@
+4:
 It is appropriate to use a const reference to a std::string parameter when
 a function does not need to modify the std::string object, and you do not
 want to make a more memory expensive copy of the string.

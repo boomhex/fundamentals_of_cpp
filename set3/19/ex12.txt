@@ -1,0 +1,4 @@
+12:
+It is generally not appropriate to return a std::string, since it can be
+inefficient to copy the temporary, and the preferred alternative could be
+passing a reference instead.

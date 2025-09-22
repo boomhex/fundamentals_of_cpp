@@ -1,3 +1,4 @@
+2:
 It is appropriate to define a std::string parameter when a function needs
 to use string type parameters, and their built-in member functions, that
 are in the std::string class.
