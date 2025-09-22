@@ -1,1 +1,7 @@
-descr1
+This program is a simplified reimplementation of 
+the Unix wc (word count) tool.
+It reads text from the standard input stream and reports 
+one of three counts depending on the command-line option:
+	•	-c → counts the number of characters
+	•	-w → counts the number of words (whitespace-separated tokens)
+	•	-l → counts the number of lines

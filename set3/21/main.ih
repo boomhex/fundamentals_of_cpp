@@ -1,0 +1,8 @@
+#include <string>
+#include <cstddef>                                          // for size_t
+
+using namespace std;                               // allows to omit std::
+
+void quicksort(string arr[], size_t left, size_t right);    // quicksort.cc
+size_t partition(string arr[], size_t left, size_t right);  // partition.cc
+string tolower(string str);
