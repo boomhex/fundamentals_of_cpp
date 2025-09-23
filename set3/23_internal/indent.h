@@ -1,3 +1,6 @@
+#ifndef INDENT_H
+#define INDENT_H
+
 #include <iostream>
 
 using namespace std;    // omit std::
@@ -7,3 +10,5 @@ void indent_less();
 void indent_more();
 void reset_indentation();
 void step_size(int setSize);
+
+#endif
