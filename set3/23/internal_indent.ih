@@ -1,0 +1,10 @@
+#ifndef INTERNAL_INDENT_H
+#define INTERNAL_INDENT_H
+
+using namespace std;
+
+int &depth();
+int &step();
+bool &step_locked();
+
+#endif
