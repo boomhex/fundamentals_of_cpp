@@ -4,9 +4,9 @@
 
 using namespace std;                        // allows to omit std::
 
-size_t partition(string arr[], size_t left, size_t right)
+size_t partition(string *arr, size_t left, size_t right)
 {
-    string pivot = tolower(arr[left]);
+    string const pivot = tolower(arr[left]);
     size_t pivotIndex = left;
     ++left;
     while (left != right)

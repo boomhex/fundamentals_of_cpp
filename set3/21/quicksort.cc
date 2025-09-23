@@ -4,7 +4,7 @@
 
 using namespace std;                        // allows to omit std::
 
-void quicksort(string arr[], size_t left, size_t right)
+void quicksort(string *arr, size_t left, size_t right)
 {
     if (left != right)
     {

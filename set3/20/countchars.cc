@@ -1,5 +1,4 @@
 #include "main.ih"
-#include <iostream>
 
 using namespace std;
 

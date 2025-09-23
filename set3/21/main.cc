@@ -13,15 +13,13 @@ int main()
         ++size;
 
     // copy into array of std::string
-    string *arr = new string[size];
+    string arr[size];
     size_t idx = 0;
     for (char **env = environ; *env != nullptr; ++env)
         arr[idx++] = *env;
 
     quicksort(arr, 0, size);
 
-    for (size_t i = 0; i < size; ++i)
+    for (size_t i = 0; i != size; ++i)
         cout << arr[i] << '\n';
-
-    delete[] arr;   // cleanup
 }

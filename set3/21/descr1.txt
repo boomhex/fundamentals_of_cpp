@@ -1,4 +1,4 @@
 This program copies all environment variables into a dynamic array of strings
- and sorts them alphabetically using quicksort. After sorting, 
- it prints each environment variable in order and 
- then frees the allocated memory.
+and sorts them alphabetically using quicksort. After sorting, 
+it prints each environment variable in order and 
+then frees the allocated memory.
