@@ -1,0 +1,115 @@
+Profiling Tables Across Optimization Levels
+==============================================
+
+-O0 (no optimization)
+----------------------------------------------------------
+%time  cumsec  selfsec  calls      s/call   tot/call  name
+32.34  9.93    9.93     -          -        -         _init
+13.33  14.02   4.09     100000000  0.00     0.00      fun(string)
+12.91  17.98   3.96     100000000  0.00     0.00      fun2(string const&)
+...
+0.26   30.32   0.08     1          0.08     9.44      callRef(string const&)
+0.10   30.70   0.03     1          0.03     11.36     callValue(string const&)
+...
+
+-O1
+----------------------------------------------------------
+%time  cumsec  selfsec  calls      s/call   tot/call  name
+26.44  0.19    0.19     100000000  0.00     0.00      fun(string)
+25.05  0.37    0.18     -          -        -         _init
+19.48  0.51    0.14     100000000  0.00     0.00      fun2(string const&)
+15.31  0.62    0.11     1          110.20   300.55    callValue(string const&)
+13.91  0.72    0.10     1          100.18   240.44    callRef(string const&)
+0.00   0.72    0.00     2          0.00     0.00      string::string(const*)
+
+
+-O2
+----------------------------------------------------------
+%time  cumsec  selfsec  calls      s/call   tot/call  name
+51.61  0.17    0.17     -          -        -         _init
+27.32  0.26    0.09     1          90.16    140.26    callValue(string const&)
+15.18  0.31    0.05     100000000  0.00     0.00      fun(string)
+6.07   0.33    0.02     100000000  0.00     0.00      fun2(string const&)
+0.00   0.33    0.00     2          0.00     0.00      string::string(const*)
+0.00   0.33    0.00     1          0.00     20.04     callRef(string const&)
+
+
+-O3
+----------------------------------------------------------
+%time  cumsec  selfsec  calls      s/call   tot/call  name
+63.45  0.19    0.19     -          -        -         _init
+20.04  0.25    0.06     1          60.11    90.16     callValue(string const&)
+10.02  0.28    0.03     100000000  0.00     0.00      fun(string)
+6.68   0.30    0.02     100000000  0.00     0.00      fun2(string const&)
+0.00   0.30    0.00     2          0.00     0.00      string::string(const*)
+0.00   0.30    0.00     1          0.00     20.04     callRef(string const&)
+
+
+Explanation of Optimization Levels
+==============================================
+
+	•	-O0
+At this level, no compiler optimizations are applied.
+	- fun(string) takes 13.33% of total time (4.09s).
+	- fun2(const string&) takes 12.91% (3.96s).
+This diffence is small, but we need to look at callValue and callRef
+    - callValue takes 0.10% of total time (0.03s)
+    with total sec/call of 11.36s (36.98%)
+    - callRef takes 0.26% (0.08s) 
+    with total sec/call of 9.44s (30.73%)
+Only when we look at the callRef and callValue functions we start to see the
+the penalty of copying a string vs. referencing it directly.
+
+
+	•	-O1
+Performs basic optimizations: dead code removal, simple inlining,
+register allocation. Execution is faster, but still preserves structure.
+	- fun(string) rises to 26.44% (0.19s).
+	- fun2(const string&) is 19.48% (0.14s).
+Together they now account for almost 46% of runtime
+    - callValue: 15.31% (0.11s), with 300.55 total msec/call.
+    - callRef: 13.91% (0.10s), with 240.44 total msec/call.
+The cost of copying increases: both callValue and 
+callRef take relatively more time, but callValue is still the slower one.
+
+	•	-O2
+More aggressive optimizations: loop unrolling, common subexpression
+elimination, interprocedural analysis. Many trivial function calls vanish
+into their callers. As a result, fun/fun2 show nearly zero time,
+while callValue dominates.
+    - fun(string): 15.18% (0.05s).
+    - fun2(const string&): 6.07% (0.02s).
+Here, the reference-based version becomes clearly cheaper.
+	- callValue: 27.32% (0.09s) with 140.26 total msec/call.
+	- callRef: 0.00% (0.00s) but still visible at 20.04 total msec/call.
+-O2 favors const&: copying a string is still significantly 
+more costly despite compiler optimizations.
+Also we can see thar callRef now basically takes no time, this is because
+the compiler can fully inline the function and optimize away most of 
+the overhead when passing by reference, 
+leaving almost no measurable runtime cost.
+
+	•	-O3
+Adds vectorization, function cloning, aggressive inlining, speculative
+optimizations. Profiling shows more work absorbed by callValue and
+reduced cost in lower-level helpers.
+	- fun(string): 10.02% (0.03s).
+	- fun2(const string&): 6.68% (0.02s).
+The relative gap remains, but it does become smaller compared to -O2.
+still it is visible that reference-passing is more efficient.
+	- callValue: 20.04% (0.06s) with 90.16 total s/call.
+	- callRef: negligible, but still present with 20.04 total s/call.
+here at -O3, user code is so optimized that startup (_init, 63.45%) dominates. 
+But the difference between value vs. reference remains visible in callValue.
+
+
+With all this information we can clearly see that it is very important to 
+pass strings by const& instead of copying whenever possible. 
+The profiling tables show that copying (callValue) consistently 
+costs more runtime than referencing (callRef), 
+even after compiler optimizations.
+
+We also see a strong increase in speed when using compiler optimizations, 
+especially with -O2 and -O3. At these levels, many trivial function calls 
+are inlined or eliminated, and the overhead of fun and fun2 almost disappears.
+The remaining bottleneck is the difference between copying and referencing.

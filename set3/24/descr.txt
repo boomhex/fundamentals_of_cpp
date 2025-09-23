@@ -1,0 +1,4 @@
+This program measures the performance difference between 
+passing a string by value and by constant reference. 
+It repeatedly calls two functions millions of times to 
+highlight the overhead of copying versus referencing.

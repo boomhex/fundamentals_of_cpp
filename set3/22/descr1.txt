@@ -1,0 +1,4 @@
+This program simulates assigning random eye colors (brown or blue) 
+to a population of people. It uses random selection without replacement 
+to determine and print the color and identifier of each 
+person until the population is exhausted.
