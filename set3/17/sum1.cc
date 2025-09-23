@@ -1,12 +1,12 @@
 #include <string>
 using namespace std;
 
-int sum(int argc, char *argv[], int)   // sum1.cc
+int sum(int const argc, char const *argv[], int)    // sum1.cc
 {
     int total = 0;
-    for (size_t idx = 1; idx < argc; ++idx)
+    for (int idx = 1; idx < argc; ++idx)        // for all arguments
     {
-        total += stoi(argv[idx]);
+        total += stoi(argv[idx]);               // read argv as int and add
     }
-    return total;
+    return total;                               // return result
 }
