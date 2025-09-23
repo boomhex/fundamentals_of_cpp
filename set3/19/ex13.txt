@@ -1,0 +1,8 @@
+13:
+It is not appropriate to return a const reference to an int-type. Since an
+int-type is cheap-to-copy, and returning a reference is only possible if
+the reference is not to a local variable, since those do not outlive the 
+function call. But even if the reference is to a variable that does outlive
+the function call (e.g. value inside of an object) it would not add benefit
+since int-type is cheap-to-copy. The preferred alternative is to return an
+int-type.

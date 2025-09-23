@@ -1,0 +1,5 @@
+18:
+It is not appropriate to return an const rvalue reference to a std::string.
+Because of the same reason in the previous question that you eliminate the
+practical use of returning a rvalue reference that allows for moving.
+The preferred alternative would be to to return the std::string by value.

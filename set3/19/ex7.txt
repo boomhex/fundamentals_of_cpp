@@ -1,3 +1,9 @@
+7:
+It is not appropriate to use a const rvalue reference to an int-type parameter
+since they are cheap to copy. It would make code less readable, and less
+efficient. The preferred alternative would be to just use a regular int-type
+parameter instead.
 
-
-In the code example this is illustrated because
+In this code example this is illustrated because the someFunction() is
+clearer, and does not affect performance in any way. And the usability of
+the someRvalueFunction() is less, since it is only callable with an rvalue.

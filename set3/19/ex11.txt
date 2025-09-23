@@ -1,0 +1,7 @@
+11:
+It is appropriate to return an int when a function’s result is a small
+whole number, and the caller only needs a copy of the result.
+
+This is illustrated in the code example, because the function
+maxInteger() returns an int-type parameter. The call from the
+main function only needs a copy, and not a reference to the original vars.

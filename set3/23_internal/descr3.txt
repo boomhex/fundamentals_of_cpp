@@ -1,0 +1,11 @@
+1. How does this access control work?
+The shared states are hidden inside static local variables in functions
+declared in an internal header. Only the library’s  source files include this
+header, so user code that includes only indent.h cannot use those variables.
+The user can modify those variables through the indent.h functions, which
+have sanity checks to prevent undesired behavior (negative indentation, 
+changing indentation after first call).
+
+2. What could the user do to circumvent this access control, without
+modifying the header file or library?
+A user could 

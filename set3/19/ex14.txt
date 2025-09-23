@@ -1,0 +1,7 @@
+14:
+It is appropriate to return a const std::string reference when the function
+must give the caller access to an existing string object without copying it,
+and when the string’s lifetime is guaranteed to outlive the function call
+(e.g., when it is a member variable of a struct). Returning by const
+reference avoids expensive copies while still preventing the caller from
+modifying the object’s internal state.

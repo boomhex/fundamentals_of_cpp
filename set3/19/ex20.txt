@@ -1,0 +1,8 @@
+20:
+It is appropriate to return a rvalue reference to a std::string. Because you
+can move ownership of a temporary string to the caller. This way, you avoid
+copying a temporary object, and are able to move or modify the temporary object.
+
+This is illustrated in the example because the temporary is stored in
+stringTemp, which can then be modified to add the second part of the
+message.

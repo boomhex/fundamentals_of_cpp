@@ -1,3 +1,4 @@
+6:
 It is appropriate to use a non-const reference to a std::string type
 parameter when a function needs to change the string in place, and no
 copy is needed.
