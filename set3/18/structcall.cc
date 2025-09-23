@@ -9,7 +9,7 @@ bool structCall(int argc, char **argv)
 
     if (!result.ok)
     {
-        cout << "Usage: ./program_name arg_nr arg1 arg2 ..\n";
+        cout << "Usage: " << argv[0] << " arg_nr arg1 arg2 ..\n";
         return false;
     }
 

@@ -10,7 +10,7 @@ ReturnValues combine(int argc, char** argv)
     if (argc < 2)
         return result;  // no requested argument
 
-    int argRequested = stoul(argv[1]);   // prevent off-by-one error
+    int argRequested = stoul(argv[1]);
 
     if (argRequested < argc)
     {
