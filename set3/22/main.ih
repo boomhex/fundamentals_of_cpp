@@ -1,10 +1,10 @@
 #include <iostream>
 #include <random>
 
-struct Arguments
+struct Arguments            // struct for all arguments
 {
     size_t population = 0;
-    unsigned seed = 0;
+    size_t seed = 0;
     bool ok = false;
 };
 
