@@ -4,10 +4,9 @@
 
 using namespace std;                        // allows to omit std::
 
-string tolower(string str)
+string tolower(string const &str)
 {
-    string res;
-    res.reserve(str.size());
+    string res = str;
     for (unsigned char ch : str)
         res.push_back(tolower(ch));
     return res;

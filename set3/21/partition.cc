@@ -11,15 +11,20 @@ size_t partition(string *arr, size_t left, size_t right)
     ++left;
     while (left != right)
     {
-        if (tolower(arr[left]) <= pivot)
+        if (tolower(arr[left]) > pivot)
         {
-            swap(arr[pivotIndex], arr[left]);
-            pivotIndex = left;
-            ++left;
-        } 
+            --right;
+            string tmp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = tmp;
+        }
         else
         {
-            swap(arr[left], arr[--right]);
+            string tmp = arr[pivotIndex];
+            arr[pivotIndex] = arr[left];
+            arr[left] = tmp;
+            pivotIndex = left;
+            ++left;
         }
     }
     return pivotIndex;

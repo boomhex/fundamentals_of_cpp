@@ -8,18 +8,14 @@ extern char **environ;
 
 int main()
 {
-    size_t size = 0;
-    for (char **env = environ; *env != nullptr; ++env)
-        ++size;
+    size_t size = numberOfEV();
 
     // copy into array of std::string
     string arr[size];
-    size_t idx = 0;
-    for (char **env = environ; *env != nullptr; ++env)
-        arr[idx++] = *env;
+    getEVArray(arr, size);
 
     quicksort(arr, 0, size);
 
-    for (size_t i = 0; i != size; ++i)
-        cout << arr[i] << '\n';
+    for (size_t count = 0; count != size; ++count)
+        cout << arr[count] << '\n';
 }
