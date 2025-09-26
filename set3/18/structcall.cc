@@ -1,13 +1,11 @@
 #include "main.ih"
 #include <iostream>
 
-using namespace std;
-
-bool structCall(int argc, char **argv)
+bool structCall(size_t argc, char **argv)
 {
     ReturnValues result = combine(argc, argv);
 
-    if (!result.ok)
+    if (not result.ok)
     {
         cout << "Usage: " << argv[0] << " arg_nr arg1 arg2 ..\n";
         return false;

@@ -1,8 +1,8 @@
 10:
 It is appropriate to use an rvalue reference to a std::string type parameter
-when you do not want to make a needless copy of an rvalue parameter. Using
-an rvalue reference the function can take ownership of the std::string type
-parameter.
+when you do not want to make a needless copy of a temporary anonymous string.
+Using an rvalue reference the function can take ownership of the std::string
+type parameter.
 
 In the code example this is illustrated because the function avoidCopy(),
 does not make a copy of the rvalue of the string to print it, while

@@ -1,9 +1,7 @@
 #include "main.ih"
 #include <iostream>
 
-using namespace std;
-
-ReturnValues combine(int argc, char** argv)
+ReturnValues combine(size_t argc, char** argv)
 {
     ReturnValues result;    // initialized in header
 
@@ -12,7 +10,7 @@ ReturnValues combine(int argc, char** argv)
 
     int argRequested = stoul(argv[1]);
 
-    if (argRequested < argc)
+    if (argRequested < argc)    // valid requested arg
     {
         result.ok = true;
         result.nr = argRequested;

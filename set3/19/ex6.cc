@@ -5,9 +5,8 @@
 void toLowerString(std::string &someText)
 {
     for (size_t index = 0; index < someText.length(); ++index)
-    {
         someText[index] = std::tolower(someText[index]);
-    }
+
 }
 
 int main()
