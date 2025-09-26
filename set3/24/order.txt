@@ -6,3 +6,7 @@ callvalue.cc
 callref.cc
 main.cc
 descr1.txt
+-profile_O0.txt
+-profile_O1.txt
+-profile_O2.txt
+-profile_O3.txt

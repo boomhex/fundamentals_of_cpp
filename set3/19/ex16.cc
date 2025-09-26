@@ -6,7 +6,7 @@ struct Person
     std::string name;
 };
 
-std::string &accessName(Person peeps)
+std::string &accessName(Person& peeps)
 {
     return peeps.name;
 }
