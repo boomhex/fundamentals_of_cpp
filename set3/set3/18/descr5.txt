@@ -1,0 +1,5 @@
+The function boundCall calls combine() to retrieve a requested argument.
+Unlike structCall, it does not explicitly define a local ReturnValues
+struct outside of the if-statement, but binds combine()'s return value
+directly in the if condition. If the requested argument exists, it passes
+the result to printResult() for output.

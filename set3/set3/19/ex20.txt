@@ -1,0 +1,4 @@
+20:
+It is not appropriate to return a rvalue reference to a std::string. Because
+you return a local variable that is destroyed at the end of a function call.
+The preferred alternative would be to return by value for std::string.

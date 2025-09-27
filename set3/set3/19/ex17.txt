@@ -1,0 +1,6 @@
+17:
+It is not appropriate to return a const rvalue reference to an int-type.
+Because marking a rvalue reference as const makes them immutable, and that
+eliminates all practical uses like move semantics, or modifying temporary
+objects. The preferred alternative is to return by a const lvalue or to
+return by value.

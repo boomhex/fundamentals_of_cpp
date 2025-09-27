@@ -1,0 +1,51 @@
+1. How does this access control work?
+The shared states are hidden inside static local variables in functions
+declared in an internal header. Only the library’s  source files include this
+header, so user code that includes only indent.h cannot use those variables.
+The user can modify those variables through the indent.h functions, which
+have sanity checks to prevent undesired behavior (negative indentation, 
+changing indentation after first call).
+
+2. What could the user do to circumvent this access control, without
+modifying the header file or library?
+A user can only access the variables from the provided functions. So using
+conventional cpp ways, it is not possible to circumvent the access control
+without modifying the header file or library.
+
+3. Why is a static local variable better than a static global one?
+Using a static local variable is better than a static global one, because
+global ones can be changed by any function in that file. So tracking where
+the value is changed is much harder.
+
+4. What is the reasoning behind using a separate source file for each function?
+Keeping things modular. This is desirable because e.g. functions can be tested
+more conveniently, and to avoid an executable from becoming too big by
+using a certain function, that is in the same source file as another unused
+function. Where the unused function will end up in the executable binary.
+Besides that, recompiling is more efficient, since 1 change in a file will
+cause the whole file to have to be recompiled, so separating functions will
+save compilation time when something is changed in one of the functions.
+
+5. Having many source files causes extra work for the compiler. Wherein lies
+the bulk of this work?
+The bulk of the work lies in rereading and processing header file inclusions
+for each source file. Each source file is compiled independently, so even
+if the same header is included in multiple files, the compiler has to parse
+it every time. This includes  all declarations and definitions in the header.
+Besides that, the compiler has to build symbol tables, check for duplicate
+declarations, and perform template instantiations if templates are used.
+All of this repeated work for every compilation unit can add up and slow
+down compilation, especially when headers are large or heavily nested.
+
+6. How do we help reduce the extra time that takes?
+We can reduce the extra compilation time by minimizing the repeated parsing
+of header files. This is achieved by using include guards to prevent a
+header from being processed multiple times within the same
+compilation unit. Finally, keeping headers small and focused ensures that
+each source file includes only what it actually needs, reducing redundant
+work and improving compilation efficiency.
+
+7. Did you actually do that to create libindent.h? How can we see?
+I have only included an include guard in the indent.h file. The internal
+header is also small and focused, but that is also due to the small nature
+of the program.

@@ -1,0 +1,13 @@
+#include <iostream>
+#include <random>
+
+struct Arguments            // struct for all arguments
+{
+    size_t population = 0;
+    size_t seed = 0;
+    bool ok = false;
+};
+
+Arguments parseArgs(int const argc, char const *argv[]);
+void makePeople(size_t arr[], size_t n);
+void printOutput(Arguments &args, size_t numberOfBrown, size_t people[]);

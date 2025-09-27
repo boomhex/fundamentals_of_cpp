@@ -1,0 +1,3 @@
+This function stores the returnvalue of combine in a local variable and
+displays a user instruction if the program call was bad, and the nr and
+value of the requested argument otherwise.

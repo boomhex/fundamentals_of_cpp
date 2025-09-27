@@ -1,0 +1,5 @@
+7:
+It is not appropriate to use a const rvalue reference to an int-type parameter
+since they are cheap to copy. It would make code less readable, and less
+efficient. The preferred alternative would be to just use a regular int-type
+parameter instead.

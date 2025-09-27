@@ -1,0 +1,9 @@
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+void fun2(string const &str);
+void fun(string str);
+void callValue(string const &prog);
+void callRef(string const &prog);

@@ -1,0 +1,9 @@
+This program takes as arguments a number specifying an argument and 
+then the arguments. It will output the requested number and the 
+argument associated with it.
+
+This is the header file specifying the functions and defining and
+initializing a ReturnValues struct that ahs 3 elements, ok, 
+specifying whether a program call was done in good order, nr,
+specifying the number of the requested arg. And value, specifying
+the argument requested.
