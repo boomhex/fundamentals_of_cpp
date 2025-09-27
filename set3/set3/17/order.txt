@@ -1,5 +1,0 @@
-descr1.txt
-sum.ih
-sum1.cc
-sum2.cc
-main.cc

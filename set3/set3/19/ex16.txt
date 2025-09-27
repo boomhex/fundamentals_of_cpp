@@ -1,7 +1,0 @@
-16:
-It is appropriate to return a non-const reference to a std::string when the
-caller needs to change the value stored in a struct.
-
-This is illustrated in the code because the name variable inside the struct
-is abel to be altered using a variable that calls the accessName function
-that returns a string reference.

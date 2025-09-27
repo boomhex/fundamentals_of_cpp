@@ -1,8 +1,0 @@
-descr1.txt
-main.ih
-tolower.cc
-partition.cc
-quicksort.cc
-getevarray.cc
-numberev.cc
-main.cc

@@ -1,4 +1,0 @@
-This program uses a header and an internal header to restrict user access
-to certain variables. The program is made to make a library that defines
-functions that set the standard output stream to have a certain indentation
-when outputting.

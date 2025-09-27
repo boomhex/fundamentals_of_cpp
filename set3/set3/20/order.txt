@@ -1,7 +1,0 @@
-descr1.txt
-main.ih
-checkinput.cc
-countchars.cc
-countlines.cc
-countwords.cc
-main.cc

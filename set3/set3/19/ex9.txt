@@ -1,4 +1,0 @@
-9:
-It is not appropriate to define a rvalue reference to an int-type parameter.
-The reason is that using a copy of an int is more efficient, and clearer.
-The preferred alternative is to use just a copy of an int.

@@ -1,7 +1,0 @@
-12:
-It is appropriate to return a std::string, when the string is created inside
-the function that returns it. Using a reference to the local variabel will
-not work, since they do not outlive the function.
-
-This is illustrated in the code example because the greeting function creates the
-greetString, local variable that gets copied on return.

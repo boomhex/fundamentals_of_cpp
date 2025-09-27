@@ -1,7 +1,0 @@
-#include <cstddef>
-#include <iostream>
-
-char checkInput(int const argc, char const *argv[]);
-size_t countChars();    // countchars.cc
-size_t countWords();    // countwords.cc
-size_t countLines();    // countlines.cc

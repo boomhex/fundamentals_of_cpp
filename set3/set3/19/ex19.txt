@@ -1,4 +1,0 @@
-19:
-It is not appropriate to return a rvalue reference to an int-type. Because
-an int is cheap to copy, and the preferred alternative would be to return-
-by-value.

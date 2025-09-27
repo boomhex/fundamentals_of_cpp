@@ -1,2 +1,0 @@
-int sum(int const argc, char const *argv[], int);       // sum1.cc
-double sum(int const argc, char const *argv[], double); // sum2.cc

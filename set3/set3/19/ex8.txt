@@ -1,6 +1,0 @@
-8:
-It is not appropriate to use a const rvalue reference to a std::string type
-parameter. An rvalue reference lets you move memory since copying can be
-expensive. When you make it const, you get an immutable object, that has no
-advantage over using a const reference to a std::string type parameter. Using
-the alternative would be much more clearer instead, and have more usability.

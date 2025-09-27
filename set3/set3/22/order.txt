@@ -1,6 +1,0 @@
-descr1.txt
-main.ih
-checkarguments.cc
-makepeople.cc
-printoutput.cc
-main.cc

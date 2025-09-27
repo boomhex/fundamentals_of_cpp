@@ -1,5 +1,0 @@
-This program sums numeric command-line arguments.
-If any argument contains a decimal point, 
-all inputs are treated as floating-point numbers; 
-otherwise, they are treated as integers.
-The computed sum is then printed to standard output.
