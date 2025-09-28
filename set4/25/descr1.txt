@@ -1,0 +1,14 @@
+The concept of "encapsulation" and "data hiding" means:
+
+Encapsulation:
+    Encapsulation means bundling the functions and data a struct or class
+    stores, in a single object. The internal workings can be hidden from the
+    user because they only see the interface. Encapsulation makes reduces
+    coupling, improves reusability, and makes the code more maintainable.
+
+Data hiding:
+    Data hiding means making variables inside of a struct or class
+    inaccessable for a user of said struct or class. In the creation of a
+    struct or class, this can be beneficial to set up a filter on altering
+    variables to avoid invalid inputs to a variable or avoid a buffer overflow
+    by enforcing an input size limit.
