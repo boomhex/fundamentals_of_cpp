@@ -1,0 +1,4 @@
+This class is able to parse a line using its member functions. It is centered
+around parsing equations and has a member function to asses whether a parsed
+number is an intgral value or not, and utilizes line.ih to process lines.
+It can convert substrings to their double values.

@@ -1,0 +1,8 @@
+descr1.txt
+parser.ih
+convert.cc
+puredouble.cc
+reset.cc
+number.cc
+isintegral.cc
+next.cc
