@@ -11,3 +11,4 @@ getphone.cc
 getmass.cc
 insert.cc
 extract.cc
+-main.cc

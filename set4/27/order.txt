@@ -1,0 +1,17 @@
+-person.h
+-person.ih
+-setname.cc
+-setaddress.cc
+-setphone.cc
+-setmass.cc
+-hasonly.cc
+-getname.cc
+-getaddress.cc
+-getphone.cc
+-getmass.cc
+-insert.cc
+-extract.cc
+main.ih
+readperson.cc
+writeperson.cc
+main.cc
