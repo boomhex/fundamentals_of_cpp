@@ -1,6 +1,6 @@
 #include "main.ih"
 
-void readPerson(Person *persons, size_t size, istream &in)
+void readPerson(Person persons[], size_t size, istream &in)
 {
     for (size_t idx = 0; idx != size; ++idx)
     {

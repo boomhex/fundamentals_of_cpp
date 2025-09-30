@@ -3,5 +3,5 @@
 
 using namespace std;
 
-void readPerson(Person *persons, size_t size, istream &in);
-void writePerson(Person *persons, size_t size,ostream &out);
+void readPerson(Person persons[], size_t size, istream &in);
+void writePerson(Person persons[], size_t size,ostream &out);
