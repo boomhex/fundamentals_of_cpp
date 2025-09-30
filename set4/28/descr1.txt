@@ -1,0 +1,2 @@
+This class can parse lines, and finds all non-ws substrings by calling
+Line::next returning an empty string on end.

@@ -4,13 +4,12 @@
 
 string Line::next()
 {
-    if (d_position == string::npos)
+    if (d_pos == string::npos)     // Empty string on line end.
         return "";
 
-    // Move position, and return new substring.
-    size_t endingPosition = d_line.find_first_of(" \t\n", d_position);
-    cout << "Debug 1: " << endingPosition << '\n';
-    string substring = d_line.substr(d_position, endingPosition - d_position);
-    d_position = endingPosition;
-    return substring;
+    size_t endPos = d_line.find_first_of(" \t\n", d_pos);   // Find end substr
+    string subString = d_line.substr(d_pos, endPos - d_pos);
+    d_pos = d_line.find_first_not_of(" \t\n", endPos);  // Update new pos
+    cout << subString << '\n';
+    return subString;
 }
