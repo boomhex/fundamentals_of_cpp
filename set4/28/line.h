@@ -1,5 +1,5 @@
-#ifndef LINE_IH
-#define LINE_IH
+#ifndef LINE_H
+#define LINE_H
 
 #include <string>
 #include <iostream>

@@ -1,4 +1,4 @@
-#include "line.ih"
+#include "line.h"
 #include <iostream>
 
 bool Line::getLine()
