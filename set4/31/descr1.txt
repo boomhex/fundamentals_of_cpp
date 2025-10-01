@@ -1,0 +1,4 @@
+This program can run the calculator, 
+then it was tested to see if it was functioning correctly.
+
+All requirements for the calculator are tested and worked correctly.

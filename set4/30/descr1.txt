@@ -1,0 +1,14 @@
+The calculator is a simple program that lets the user enter expressions 
+like number operator number. It supports the operators +, -, *, /, and %, 
+but division or modulo with zero (or nearly zero) is not allowed, 
+and modulo only works with whole numbers. 
+
+If the input is written incorrectly or contains extra parts, 
+the program shows an error message. 
+The program keeps asking for new input until the user enters an empty line, 
+then it stops.
+
+The reason we dont need to write our own constructor is because c++ already
+has a default contructor that is good enough for the class Calculator. 
+All data members are initialized with default values (empty) 
+and dont need external values at initialization.
