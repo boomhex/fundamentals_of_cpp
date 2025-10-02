@@ -18,7 +18,7 @@ class Parser
 
         bool reset();
         Return number(double *dest);
-        bool isIntegral();
+        bool isIntegral() const;
         string next();
 
     private:
