@@ -1,8 +1,7 @@
 #ifndef CALCULATOR_H
 #define CALCULATOR_H
-#include <iostream>
-#include <string>
 #include <sstream>
+
 using namespace std;
 
 class Calculator
@@ -24,6 +23,7 @@ class Calculator
         bool getOperator();                     // getoperator.cc
         void evaluate();                        // evaluate.cc
 
+        bool hasOnly(char const *characters, string const &object);
         bool isZero(double value);              // iszero.cc
 };
 #endif

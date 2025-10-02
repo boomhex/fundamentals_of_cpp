@@ -5,15 +5,19 @@ bool Calculator::number(double *dest, bool *isInt)
 {
     string number;
     d_line >> number;                       // get next substring
-    try
-    {
-        *dest = stod(number);               // try to convert string to number
-    }
-    catch (...)
-    {
+    // check if only contains valid numbers and symbols
+    if (!hasOnly("0123456789.-", number)) 
         return false;
-    }
-    double intNum;
-    *isInt = modf(*dest, &intNum) == 0.0;   // check if number is int
+    // check if - is only infront
+    if ((number.find_last_of('-') != 0) && number.find_last_of('-') != string::npos)
+        return false;
+
+    *isInt = hasOnly("-0123456789", number);  // check if number is int
+
+    // check at most one dot with floating numbers
+    if (number.find_first_of('.') != number.find_last_of('.') && !*isInt)
+        return false;
+
+     *dest = stod(number);                   // convert string to number
     return true;
 }
