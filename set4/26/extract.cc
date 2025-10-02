@@ -3,13 +3,13 @@
 void Person::extract(istream &in)
 {
     string name;
-    getline(in, name, ',');
+    getline(in, name, ',');     // get name substring 
     string address;
-    getline(in, address, ',');
+    getline(in, address, ',');  // get address substring
     string phone;
-    getline(in, phone, ',');
+    getline(in, phone, ',');    // get phone substring
     string mass;
-    getline(in, mass, '\n');;
+    getline(in, mass, '\n');    // get mass substring
 
     setName(name);
     setAddress(address);

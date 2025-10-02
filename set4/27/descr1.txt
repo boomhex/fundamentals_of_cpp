@@ -1,0 +1,7 @@
+This program defines an array of five Person objects 
+and allows the user to enter their information one by one. 
+For each input line, the program shows a ?  prompt 
+and stores the entered data into the corresponding Person object. 
+After all entries are completed, 
+the program prints the information of all persons to the screen. 
+The array size can easily be changed by adjusting a single value in the code.

@@ -11,6 +11,7 @@
 -getmass.cc
 -insert.cc
 -extract.cc
+descr1.txt
 main.ih
 readperson.cc
 writeperson.cc

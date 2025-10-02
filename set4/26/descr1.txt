@@ -1,0 +1,8 @@
+This program implements a Person class that stores a 
+name, address, phone number, and mass. 
+The class provides setters and getters, 
+and ensures that phone numbers contain only digits. 
+It also includes an insert function to write a person’s 
+data to an output stream, 
+and an extract function to read a person’s data from an 
+input stream where the values are separated by commas. 

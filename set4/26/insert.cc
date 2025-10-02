@@ -2,7 +2,7 @@
 
 void Person::insert(ostream &out) const
 {
-    out << name() << ','
+    out << name() << ','        // print output
         << address() << ','
         << phone() << ','
         << mass() << '\n';
