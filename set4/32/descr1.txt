@@ -1,0 +1,33 @@
+- Plain compilation time of the program: 00:51
+- Compilation time with precompiled headers: 00:16
+    Sizes of precompiled headers:
+        arg.ih.gch: 57MB
+        datetime.ih.gch: 60MB
+        exception.ih.gch: 36MB
+        iuo.ih.gch: 30MB
+        keys.ih.gch: 51MB
+        main.ih.gch: 47MB
+        mbuf.ih.gch: 42MB
+        mstream.ih.gch: 44MB
+        string.ih.gch: 41MB
+        student.ih.gch: 53MB
+        students.ih.gch: 61MB
+        total: 522MB
+- Compilation time with single precompiled header: 00:12
+    Size of single precompiled header:
+        spch.gch: 65MB
+- Compilation time using a SPCH and all CPU's: 00:00 (rounded to min:sec)
+- Compilation time after removing results of previous item: 00:00 (rounded to min:sec)
+- Conclusion:
+    Plain compilation was the slowest, as every source file has to be compiled
+    from scratch, without reuse. Separately precompiled headers reduced build
+    time a lot, but had quite a significant storage. Using a single precompiled
+    header (SPCH), reduced build time even more, at a lower storage space.
+    Using all cpu's with a SPCH reduced build time significantly, to reducing
+    it to less than a second. Which shows that parallel compilation is very
+    powerful. rebuilding with ccache kept the compilation times very low at
+    less than a second. Overall, precompiled headers reducebuild times, and
+    using a single precompiled header is both faster and more space-efficient
+    than multiple headers. Combining this with parallel builds and ccache
+    provides near-instant recompilation, which improves programming
+    productivity in large C++ projects.

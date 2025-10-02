@@ -6,3 +6,4 @@ reset.cc
 number.cc
 isintegral.cc
 next.cc
+-main.cc
