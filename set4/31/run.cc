@@ -1,4 +1,5 @@
 #include "calculator.h"
+#include <iostream>
 
 void Calculator::run()
 {
