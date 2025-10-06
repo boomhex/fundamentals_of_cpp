@@ -1,2 +1,49 @@
+#ifndef PERSON_IH
+#define PERSON_IH
+
 #include "person.h"
 #include <iostream>
+
+using namespace std;
+
+inline void Person::setName(string const &name)
+{
+    d_name = name;
+}
+
+inline void Person::setAddress(string const &address)
+{
+    d_address = address;
+}
+
+inline void Person::setPhone(string const &phone)
+{
+    d_phone = phone;
+}
+
+inline void Person::setMass(size_t mass)
+{
+    d_mass = mass;
+}
+
+inline string const &Person::name() const
+{
+    return d_name;
+}
+
+inline string const &Person::address() const
+{
+    return d_address;
+}
+
+inline string const &Person::phone() const
+{
+    return d_phone;
+}
+
+inline size_t Person::mass() const
+{
+    return d_mass;
+}
+
+#endif
