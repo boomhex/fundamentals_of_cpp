@@ -10,7 +10,7 @@ int main()
         std::cout << "Getting line" << '\n';
 
         std::string nextStr;
-        while (not ((nextStr = someLine.next()) == ""))   // Read all substr
+        while (not ((nextStr = someLine.next()).empty()))   // Read all substr
             std::cout << "Token: " << nextStr << "\n";    // until empty
     }
 }

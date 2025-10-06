@@ -7,7 +7,7 @@
 class Parser
 {
     Line d_line;
-    bool d_integral;
+    bool d_integral = 0;
 
     public:
         enum Return 
