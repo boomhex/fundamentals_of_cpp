@@ -2,4 +2,3 @@ descr1.txt
 line.h
 getline.cc
 next.cc
--main.cc

@@ -4,6 +4,7 @@
 -iszero.cc
 -expression.cc
 -evaluate.cc
+-hasonly.cc
 -run.cc
 descr1.txt
 output.txt
