@@ -1,5 +1,5 @@
 #include "calculator.h"
-#include "../29/parser.h"   // adjust include path to match your structure
+#include "./../29/parser.h"   // adjust include path to match your structure
 
 bool Calculator::number(double *dest, bool *isInt)
 {
