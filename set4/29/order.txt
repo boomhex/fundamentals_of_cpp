@@ -1,4 +1,5 @@
 descr1.txt
+parser.h
 parser.ih
 convert.cc
 puredouble.cc

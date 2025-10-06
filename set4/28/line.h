@@ -1,19 +1,18 @@
 #ifndef LINE_H
 #define LINE_H
 
-#include <string>
-#include <iostream>
-
-using namespace std;    // omit std
+#include <string>   // <-- needed for complete std::string
+#include <cstddef>  // <-- for std::size_t
+#include <iosfwd>
 
 class Line
 {
-    string d_line;
-    size_t d_pos;
+    std::string d_line{};
+    std::size_t d_pos = 0;
 
     public:
         bool getLine();
-        string next();
+        std::string next();
 };
 
 #endif

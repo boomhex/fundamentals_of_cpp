@@ -1,6 +1,4 @@
-#include "line.h"
-#include <string>
-#include <iostream>
+#include "line.ih"
 
 string Line::next()
 {

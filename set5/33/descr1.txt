@@ -1,0 +1,2 @@
+- The differences that exist between pointer variables and arrays are:
+    

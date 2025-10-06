@@ -2,6 +2,7 @@ descr1.txt
 calculator.h
 number.cc
 getoperator.cc
+hasonly.cc
 iszero.cc
 expression.cc
 evaluate.cc

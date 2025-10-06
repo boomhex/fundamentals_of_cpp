@@ -1,0 +1,5 @@
+#include "line.h"
+#include <string>
+#include <iostream>
+
+using namespace std;    // omit std

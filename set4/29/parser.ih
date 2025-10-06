@@ -1,32 +1,4 @@
-#ifndef PARSER_IH
-#define PARSER_IH
-
-#include "../28/line.h"
+#include "parser.h"
 #include <string>
 
 using namespace std;
-
-class Parser
-{
-    public:
-        enum Return 
-        {
-            NO_NUMBER,
-            NUMBER,
-            EOLN
-        };
-
-        bool reset();
-        Return number(double *dest);
-        bool isIntegral() const;
-        string next();
-
-    private:
-        Line d_line;
-        bool d_integral;
-
-        Return convert(double *dest, string const &str);
-        bool pureDouble(double *dest, std::string const &str);
-};
-
-#endif

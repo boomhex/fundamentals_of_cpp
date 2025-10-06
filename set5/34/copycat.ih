@@ -1,0 +1,4 @@
+#include "copycat.h"
+#include <iostream>
+
+using namespace std;    // omit std::
