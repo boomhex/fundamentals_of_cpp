@@ -3,8 +3,7 @@
 Parser::Return Parser::number(double *dest)
 {
     string nextStr = next();
-    if (nextStr == "")  // Empty string means last substring has been parsed
+    if (nextStr.empty())  // Empty string means last substring has been parsed
         return EOLN;
-    else
-        return convert(dest, nextStr);
+    return convert(dest, nextStr);
 }
