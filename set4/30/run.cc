@@ -1,4 +1,4 @@
-#include "calculator.h"
+#include "calculator.ih"
 #include <iostream>
 
 void Calculator::run()

@@ -1,4 +1,4 @@
-#include "calculator.h"
+#include "calculator.ih"
 
 bool Calculator::hasOnly(char const *characters, string const &object)
 {
