@@ -1,5 +1,6 @@
 #include "calculator.h"
 #include <iostream>
+#include <cmath>
 
 void Calculator::evaluate()
 {
@@ -19,8 +20,7 @@ void Calculator::evaluate()
             ans = d_number1 / d_number2;
         break;
         case '%':       // for module convert double to long long int
-            ans = static_cast<long long>(d_number1) % 
-                static_cast<long long>(d_number2);
+            ans = fmod(d_number1, d_number2);
         break;
         default:
         break;
