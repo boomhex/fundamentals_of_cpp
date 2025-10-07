@@ -1,0 +1,44 @@
+----------------------------------------------------------------------------
+  definition:         rewrite: 
+----------------------------------------------------------------------------
+  int x[8];           x[2] = x[3];
+
+pointer notation:     *(x + 2) = *(x + 3)
+       semantics:     The int at position 3 of x is changed to the same 
+                      int of position 4 of x.
+----------------------------------------------------------------------------
+  char *argv[8];      cout << argv[2];
+
+pointer notation:     cout << *(argv + 2)
+       semantics:     Prints all the chars that the third pointer in argv 
+                      points to.
+----------------------------------------------------------------------------
+  int x[8];           &x[10] - &x[3];
+ 
+pointer notation:     (x + 10) - (x + 3)
+       semantics:     Subtracts the address of the fourth element from the
+                      the address of the tenth element, leaving the answer 7. 
+                      Which is the number of int elements between [10] & [3]
+----------------------------------------------------------------------------
+  main's argv;        argv++[0];
+
+pointer notation:     *argv++
+       semantics:     Dereference argv to get the first string. Then 
+                      incrementing argv so it points to the next element
+----------------------------------------------------------------------------
+  main's argv;        argv[0]++;
+
+pointer notation:     (*argv)++
+       semantics:     Makes the first element of argv point to the next char
+                      of the first string.
+----------------------------------------------------------------------------
+  main's argv;        ++argv[0];
+
+pointer notation:     ++*argv
+       semantics:
+----------------------------------------------------------------------------
+  main's argv;        ++argv[0][2];
+
+pointer notation:
+       semantics:
+----------------------------------------------------------------------------
