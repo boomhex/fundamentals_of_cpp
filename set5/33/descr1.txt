@@ -1,2 +1,30 @@
-- The differences that exist between pointer variables and arrays are:
+1. Differences between pointer variables and arrays:
+   - An array allocates a contiguous block of memory; its name represents the
+     address of the first element. Its size is fixed.
+   - A pointer is a variable that stores the address of some data and can be
+     reassigned to point elsewhere. Memory for the data may be dynamically
+     allocated.
+
+2. Differences between pointer variables and reference variables:
+   - A pointer can be reassigned to point to different memory locations and
+     can be null. It requires dereferencing (*ptr) to access the value.
+   - A reference is an alias for an existing variable, cannot be null, and
+     cannot be reseated to refer to another variable. It is automatically
+     dereferenced.
+
+3. How element [3][2] is reached:
+    - For int array[20][30]:
+        First it skips the first 90 ints (3 * 30) 
+        in memory from the start of the array, 
+        then it skips another 2 ints to get to the correct element.
+    - For int *pointer[20]:
+        First it skips the first 3 pointers in memory, 
+        then the pointer points to a place in memory where it skips 
+        2 ints in memory for the correct element.
+
+4. Pointer arithmetic:
+   - Pointer arithmetic means incrementing or decrementing pointers to move
+     between memory locations.
+   - Adding 1 to a pointer moves it by the size of the type it points to.
+     Example: for int* ptr, ptr + 1 points to the next int in memory.
     
