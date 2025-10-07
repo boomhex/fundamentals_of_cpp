@@ -12,16 +12,10 @@ void showChar(char ch)
         case '\t':
             cout << "char '\\t': ";
         break;
-        case ' ':
-            cout << "char ' ': ";
-        break;
-        case 'a' - 'z':
-            /* code */
-        break;
         default:
-            if (ch >= 32 && ch <= 126)
+            if (ch >= ' ' && ch <= '~')   // check if it is a printable
                 cout << "char '" << ch << "': ";
-            else
+            else                          // else print the interger
                 cout << "char " << static_cast<int>(ch) << ": ";
         break;
     }

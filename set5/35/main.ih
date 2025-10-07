@@ -1,3 +1,0 @@
-#include "charcount.h"
-
-void showChar(char ch);

@@ -1,4 +1,4 @@
-#include "main.ih"
+#include "charcount.ih"
 
 int main()
 {

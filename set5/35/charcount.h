@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 struct Char
 {
     char ch;
@@ -14,14 +12,14 @@ struct CharInfo
     size_t nCharObj = 0;
 };
 
-class CharCount
+struct CharCount
 {
+    enum Action {APPEND, INSERT, INC};      // All actions
     CharInfo d_info;
-
+    
     public:
-        int count(istream &input);
-        const CharInfo& info() const { return d_info; } // change!!
+        size_t count(std::istream &input);     // count.cc
+        CharInfo const &info() const;       // inline function
     private:
-        
-        bool checkChars(char ch, size_t &index);
+        Action locate(char ch, size_t &index) const;    // locat.cc
 };

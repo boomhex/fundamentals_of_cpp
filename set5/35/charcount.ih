@@ -1,0 +1,10 @@
+#include "charcount.h"
+
+using namespace std;
+
+inline CharInfo const &CharCount::info() const
+{
+    return d_info;
+}
+
+void showChar(char ch);
