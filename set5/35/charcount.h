@@ -2,7 +2,7 @@
 
 struct Char
 {
-    char ch;
+    unsigned char ch;
     size_t freq;
 };
 
@@ -21,5 +21,5 @@ struct CharCount
         size_t count(std::istream &input);     // count.cc
         CharInfo const &info() const;       // inline function
     private:
-        Action locate(char ch, size_t &index) const;    // locat.cc
+        Action locate(unsigned char ch, size_t &index) const;    // locat.cc
 };

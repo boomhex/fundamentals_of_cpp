@@ -1,0 +1,12 @@
+This program counts the occurrences of characters in a given input stream,
+handling text files as well as other file types such as
+PDFs, spreadsheets, or binaries. 
+It uses the CharCount class to store an arbitrary number of 
+character elements dynamically, ensuring memory is allocated only 
+for the characters actually encountered. Each character and its frequency 
+are stored in Char objects, which are managed by a CharInfo struct within 
+CharCount, and the class provides access to this information through 
+immutable references. After processing, the program displays all characters 
+and their counts in ascending order, 
+formatting special characters like spaces, tabs, and newlines
+for clear output.

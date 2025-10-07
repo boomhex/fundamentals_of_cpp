@@ -1,6 +1,6 @@
 #include "charcount.ih"
 
-CharCount::Action CharCount::locate(char ch, size_t &index) const
+CharCount::Action CharCount::locate(unsigned char ch, size_t &index) const
 {
     for (index = 0; index != d_info.nCharObj; ++index)
     {

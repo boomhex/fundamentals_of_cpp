@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void showChar(char ch)
+void showChar(unsigned char ch)
 {
     switch (ch)
     {
