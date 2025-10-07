@@ -14,8 +14,6 @@ class CopyCat
         CopyCat(std::size_t const argc, char const **argv); // copycat2.cc
         CopyCat(char const **data);               // cp. any environ-like variable copycat3.cc
 
-        void display();
-
     private:
         static char **nstbArrCopy(char const **array,       // nstbarrcopy.cc
                                   std::size_t const nElements);

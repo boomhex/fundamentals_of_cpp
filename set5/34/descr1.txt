@@ -1,4 +1,0 @@
-This class copies an array of NSTB's without altering the original pointer.
-In particular, it can copy arrays that specify a size, like an argc, argv,
-combination as well as an array that does not specify a size. Like the global
-environ variable.
