@@ -1,6 +1,6 @@
 #include "copycat.ih"
 
-CopyCat::CopyCat(char const **data)
+CopyCat::CopyCat(char **data)
 {
     // Count number of nstb's
     auto ptr = data;
