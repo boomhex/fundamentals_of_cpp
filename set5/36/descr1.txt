@@ -32,7 +32,7 @@ pointer notation: (*argv)++;
        semantics: Incrementing argv[0] means you increment the value argv is
                   pointing to. So you increment the pointer, that argv is
                   pointing to. Lets say argv[0] == "./a.out", after argv[0]++,
-                  or (*argv)++, argv[0] will be "/a.out". The brackets are
+                  or (*argv)++, argv[0] will be "/a.out". The parenthesis are
                   there to avoid incrementing argv itself.
 ----------------------------------------------------------------------------
   main's argv;        ++argv[0];
