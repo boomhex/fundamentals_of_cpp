@@ -1,0 +1,5 @@
+descr1.txt
+process.cc
+descr2.txt
+fun.cc
+-main.cc

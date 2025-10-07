@@ -1,6 +1,6 @@
 #include "copycat.h"
 
-char *CopyCat::nstbCopy(char const *nstb, size_t length)
+char *CopyCat::ntbsCopy(char const *nstb, size_t length)
 {
     char *copy = new char[length];  // Initialize new array of chars
 

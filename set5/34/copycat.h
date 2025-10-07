@@ -15,11 +15,11 @@ class CopyCat
         CopyCat(char **data);               // cp. any environ-like variable copycat3.cc
 
     private:
-        static char **nstbArrCopy(char *const *array,       // nstbarrcopy.cc
+        static char **ntbsArrCopy(char *const *array,       // ntbsarrcopy.cc
                                   std::size_t const nElements);
-        static char *nstbCopy(char const *nstb,             // nstbcopy.cc
+        static char *ntbsCopy(char const *ntbs,             // ntbscopy.cc
                               std::size_t const length);
-        static std::size_t nstbSize(char const *nstb);      //nstbsize.cc
+        static std::size_t ntbsSize(char const *ntbs);      //ntbssize.cc
 };
 
 #endif

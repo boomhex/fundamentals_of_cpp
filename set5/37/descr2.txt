@@ -1,0 +1,2 @@
+- A function fun declared defining a parameter ptr which is an immutable
+  pointer to NTBSs, returning one of these pointers as an immutable NTBS:

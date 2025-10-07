@@ -3,8 +3,8 @@ copycat.ih
 copycat1.cc
 copycat2.cc
 copycat3.cc
-nstbarrcopy.cc
-nstbcopy.cc
-nstbsize.cc
+ntbsarrcopy.cc
+ntbscopy.cc
+ntbssize.cc
 -main.cc
 -display.cc

@@ -1,0 +1,28 @@
+- A variable ptr pointing to rows of 8 doubles:
+    double (*ptr)[8];
+- A variable pointer variable declared ptr pointing to an array holding the
+  addresses of series of doubles. The series of doubles may consist of
+  different numbers of doubles:
+    using Series = double*;
+    using SeriesArray = Series[];
+    SeriesArray *ptr;
+- Pointer ptr declared that may point to arrays of immutable pointers to
+  arrays of mutable pointers to immutable std::string objects:
+    using ImmutableString = const std::string;  // immutable string
+    using PtrToString = ImmutableString*;   // mutable ptr to immutable string
+    using PtrArray = PtrToString[];
+                    // Array of mutable pointers to const strings
+    using ImmutablePtrArr = PtrArray* const;
+                    // Immutable ptr to array.
+    using ArrayImmPtr = ImmutablePtrArr[];
+                    // Array of immutable ptrs to array.
+    ArrayImmPtr *ptr;
+- A function fun declared expecting no parameters, returning a matrix of 6 x 6
+  std::string objects:
+    std::string (&fun())[6][6];
+- A function fun declared expecting no parameters, returning a matrix of 6 x 6
+  std::string objects using StringMat:
+    using StringMat = std::string(*)[6];
+    StringMat fun();
+- Complete the following function by providing the initialization section
+  of its for-statement (submit the completed function):

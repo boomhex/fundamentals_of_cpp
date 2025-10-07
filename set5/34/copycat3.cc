@@ -9,5 +9,5 @@ CopyCat::CopyCat(char **data)
 
     d_size =  ptr - data;
     d_data = new char*[d_size];
-    d_data = nstbArrCopy(data, d_size);
+    d_data = ntbsArrCopy(data, d_size);
 }
