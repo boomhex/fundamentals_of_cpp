@@ -1,7 +1,10 @@
 #include "copycat.h"
 
-int main(int argc, char **argv)
+int main(int argc, char const **argv, char const **environ)
 {
-    CopyCat cat(argc, argv);
-    cat.display();
+    CopyCat firstCat;
+
+    CopyCat secondCat{ environ };
+
+    CopyCat thirdCat(argc, argv);
 }

@@ -5,20 +5,21 @@
 
 class CopyCat
 {
-
-    size_t d_size;
+    std::size_t d_size;
     char **d_data;
 
     public:
-        CopyCat();                          // copies environ
-        CopyCat(size_t argc, char **argv);
-        //CopyCat(char **data);               // cp. any environ-like variable
-
-        void display();
+        // Constructor:
+        CopyCat();                          // copies environ copycat1.cc
+        CopyCat(std::size_t const argc, char const **argv); // copycat2.cc
+        CopyCat(char const **data);               // cp. any environ-like variable copycat3.cc
 
     private:
-        static void copyDoubleCharPtr(size_t nElements, char const **ptr);
-        static void copyCharPtr(size_t nElements, char *ptr, char *destination);
+        static char **nstbArrCopy(char const **array,       // nstbarrcopy.cc
+                                  std::size_t const nElements);
+        static char *nstbCopy(char const *nstb,             // nstbcopy.cc
+                              std::size_t const length);
+        static std::size_t nstbSize(char const *nstb);      //nstbsize.cc
 };
 
 #endif
