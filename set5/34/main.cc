@@ -1,6 +1,6 @@
 #include "copycat.h"
 
-int main(int argc, char const **argv, char const **environ)
+int main(int argc, char **argv, char **environ)
 {
     CopyCat firstCat;
 

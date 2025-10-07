@@ -1,6 +1,6 @@
 #include "copycat.ih"
 
-char **CopyCat::nstbArrCopy(char const **array, size_t const nElements)
+char **CopyCat::nstbArrCopy(char *const *array, size_t const nElements)
 {
     char **copy = new char*[nElements];     // Initialize array of char*
 

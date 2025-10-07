@@ -1,0 +1,65 @@
+----------------------------------------------------------------------------
+  definition:         rewrite: 
+----------------------------------------------------------------------------
+  int x[8];           x[4]            
+
+pointer notation:  *(x + 4)
+       semantics:  x + 4 points to the location of the 4th int beyond x.
+                   That element is reached using the dereference operator (*)
+
+----------------------------------------------------------------------------
+  int x[8];           x[2] = x[3];
+
+pointer notation: *(x + 2) = *(x + 3);
+       semantics: x[2] points to the second location after x, x[3] third.
+                  The elements are reached using the dereference operator (*)
+----------------------------------------------------------------------------
+  char *argv[8];      cout << argv[2];
+
+pointer notation: cout << *(argv + 2);
+       semantics: argv[2] points to the second location after argv. The
+                  element is reached using the dereference opereator (*).
+----------------------------------------------------------------------------
+  int x[8];           &x[10] - &x[3];
+ 
+pointer notation: 7;
+       semantics: &x[10] is the address of 10 locations after x, or x + 10.
+                  &x[3] is address of 3 locations after x or x + 3. x + 10 -
+                  (x + 3) = 7.  
+----------------------------------------------------------------------------
+  main's argv;        argv++[0];
+
+pointer notation: *(argv++);
+       semantics: argv++[0] uses argv as address, and then after pointing to
+       argv[0] increases argv by one, making argv[1] the new argv[0].
+----------------------------------------------------------------------------
+  main's argv;        argv[0]++;
+
+pointer notation: (*argv)++;
+       semantics: Incrementing argv[0] means you increment the value argv is
+                  pointing to. So you increment the pointer, that argv is
+                  pointing to. Lets say argv[0] == "./a.out", after argv[0]++,
+                  or (*argv)++, argv[0] will be "/a.out". The brackets are
+                  there to avoid incrementing argv itself.
+----------------------------------------------------------------------------
+  main's argv;        ++argv[0];
+
+pointer notation: ++*argv
+       semantics: Prefixing increment argv[0] results in incrementing the
+                  pointee of argv. So doing the same by dereferencing argv,
+                  and prefixing increment it. The brackets are not necessary, 
+                  since the ++ evaluates what comes after, the dereferenced
+                  argv.
+----------------------------------------------------------------------------
+  main's argv;        ++argv[0][2];
+
+pointer notation: ++*(*argv + 2)
+       semantics: argv points to location argv, and the second location after
+                  the location argv points to, points to the second location
+                  after the location argv pointee points to. So in nstb
+                  "./a.out" argv[0][2] points to a. To access a, dereferencing
+                  argv, adding 2 locations and dereferencing that, will
+                  point to a. Then prefixing an increment, will increment the
+                  value that is pointed to by 1. So 'a' will become 'b' in
+                  argv[0]. Resulting in nstb "./b.out".
+----------------------------------------------------------------------------
