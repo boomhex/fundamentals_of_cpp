@@ -1,0 +1,9 @@
+copycat.h
+copycat.ih
+copycat1.cc
+copycat2.cc
+copycat3.cc
+nstbarrcopy.cc
+nstbcopy.cc
+nstbsize.cc
+-main.cc

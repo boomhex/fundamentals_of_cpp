@@ -1,6 +1,7 @@
 #include "copycat.ih"
 
-CopyCat::CopyCat(size_t argc, char **argv)
+CopyCat::CopyCat(size_t const argc, char const **argv)
 {
-    copyDoubleCharPtr(argc, argv);
+    d_size = argc;
+    d_data = nstbArrCopy(argv, argc);
 }

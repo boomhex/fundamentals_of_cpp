@@ -1,7 +1,9 @@
 #include "copycat.ih"
 
+extern char **environ;
+
 CopyCat::CopyCat()
 {
-    // CopyCat(**environ);     // Deep copy environment variables
-    // return;
+    d_size = 0;
+    d_data = 0;
 }

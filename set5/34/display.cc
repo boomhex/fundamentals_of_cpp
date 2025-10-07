@@ -3,8 +3,6 @@
 
 void CopyCat::display()
 {
-    // for (auto &string : d_data)
-    // {
-    //     cout << string << '\n';
-    // }
+    for (size_t index = 0; index != d_size; ++index)
+        cout << d_data[index] << '\n';
 }
