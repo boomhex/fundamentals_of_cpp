@@ -1,13 +1,6 @@
 ----------------------------------------------------------------------------
   definition:         rewrite: 
 ----------------------------------------------------------------------------
-  int x[8];           x[4]            
-
-pointer notation:  *(x + 4)
-       semantics:  x + 4 points to the location of the 4th int beyond x.
-                   That element is reached using the dereference operator (*)
-
-----------------------------------------------------------------------------
   int x[8];           x[2] = x[3];
 
 pointer notation: *(x + 2) = *(x + 3);
