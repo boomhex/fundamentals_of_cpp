@@ -1,0 +1,10 @@
+descr1.txt
+descr2.txt
+descr1.txt
+descr2.txt
+data/data/data.h
+data/data/data.ih
+data/data/data.cc
+data/data/read.cc
+data/data/display.cc
+-Makefile
