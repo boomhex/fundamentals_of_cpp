@@ -1,0 +1,30 @@
+The flaw is that if the compilation order is wrong, 
+that it doesn't work anymore. To be more specific; finder.cc need to be
+compiled before phonebook1.cc. 
+this is because phonebook1.cc uses finder in the initianlization.
+
+to recreate this flaw you can use the examples:
+-   start input with correct output
+    g++-15 *.cc finder/*.cc
+    ./a.out                
+        06 2327 9985
+        not available
+
+-   compiling phonebook1 before finder, wrong output
+    g++-15 phonebook1.cc main.cc finder.cc get.cc finder/*.cc
+    ./a.out                
+        not available
+        not available
+
+- compiling finder before phonebook1, correct output
+    g++-15 finder.cc phonebook1.cc main.cc get.cc finder/*.cc
+    ./a.out
+        06 2327 9985
+        not available
+
+To solve this, you can make s_finder a pointer and initialize it explicitly 
+at runtime rather than at global static initialization time. 
+This way, the Finder object is created only when the program calls an
+initialization function (e.g., PhoneBook::init()), ensuring the correct
+order of construction and avoiding undefined behavior caused by static
+initialization order.

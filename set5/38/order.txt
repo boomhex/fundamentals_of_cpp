@@ -1,0 +1,12 @@
+-finder/add.cc
+-finder/finder.cc
+-finder/finder.h
+-finder/finder.ih
+-finder/finder1.cc
+-finder/insert.cc
+-finder.cc
+-get.cc
+-main.cc
+-main.ih
+-phonebook1.cc
+descr1.txt
