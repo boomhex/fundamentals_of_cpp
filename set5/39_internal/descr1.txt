@@ -1,0 +1,65 @@
+Here we will show that the how a program behaves after changing the API which
+will also break the ABI. Besides that a provide a fix using the code provided:
+
+1.
+Compilation with commented declaration and usage of d_text:
+g++-15 -std=c++26 -c -Wall -Wextra -Werror ./data/*.cc
+
+2.
+Creating library: 
+ar rcs libdata.a display.o read.o
+
+3.
+Compile main.cc object file (I removed argc, argv since they caused
+compilation errors bc they are unused):
+g++-15 -std=c++26 -Wall -Wextra -Werror -c main.cc
+
+4.
+Link main against library:
+g++-15 libdata.a main.o -o main
+
+5.
+Run main with redirecting input stream to data.in:
+./main < data.in
+
+6.
+Output:
+Object 1: value is: 1
+Object 2: value is: 2
+Object 3: value is: 3
+Object 4: value is: 4
+
+-------------------------------------------------------------------------------
+After uncommenting the d_text and usage of it:
+Repeat step 1-2.
+
+
+3.
+Link the unchanged main.o against new library:
+g++-15 libdata2.a main.o -o main2
+Run main with redirecting input stream to data.in:
+./main2 < data.in
+
+6.
+Output:
+zsh: segmentation fault  ./main2 < data/data.in
+
+-------------------------------------------------------------------------------
+
+After using pImpl:
+
+Repeating the steps with and commented d_text:
+
+Output:
+Object 1: value is: 1
+Object 2: value is: 2
+Object 3: value is: 3
+Object 4: value is: 4
+
+Repeating steps with an uncommented d_text:
+
+Output:
+Object 1: value is: 1
+Object 2: value is: 2
+Object 3: value is: 3
+Object 4: value is: 4
