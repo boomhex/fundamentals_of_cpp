@@ -1,5 +1,5 @@
 #include "charcount.h"
 
-
 using namespace std;
 
+void showChar(unsigned char ch);
