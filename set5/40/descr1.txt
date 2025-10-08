@@ -1,0 +1,21 @@
+- The program breaks in part 2 of previous exercise because:
+Without pImpl, any change to Data’s data members (API change) is an ABI break.
+If you link objects built against different versions of the header, very
+likely crash due to size or memory layout mismatches.
+- The program doesn't break anymore when using a pointer to the implementation
+  because:
+Using pImpl, the class Data contains only one data member, that does not
+change in layout or size because it is just a pointer. Changing the
+implementation does not change the ABI, so objects that are built with other
+versions of the header, do not break.
+- If you do not use the pImpl approach but still want to change a class you
+made without users needing to recompile their sources, you can use this
+approach:
+Create a new class DataV2, that keeps Data unchanged, but includes it. This
+way users that need the extra utility can use the new class, while users that
+do not need it can still use the old class. Unchanged, and do not need to
+recompile their binaries. Since users that want to use the new utility already
+need to recompile their sources using those new utilities, they could create a
+new class DataV2 there where they insert any used Data objects, and use the
+extended utility. Unfortunately it is too late to just add data members without
+causing an ABI break.
