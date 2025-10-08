@@ -1,4 +1,4 @@
-#include "copycat.h"
+#include "copycat.ih"
 
 char *CopyCat::ntbsCopy(char const *nstb, size_t length)
 {

@@ -3,13 +3,13 @@
 struct Char
 {
     unsigned char ch;
-    size_t freq;
+    std::size_t freq;
 };
 
 struct CharInfo
 {
     Char *ptr = nullptr;
-    size_t nCharObj = 0;
+    std::size_t nCharObj = 0;
 };
 
 struct CharCount
@@ -18,8 +18,10 @@ struct CharCount
     CharInfo d_info;
     
     public:
-        size_t count(std::istream &input);     // count.cc
+        std::size_t count(std::istream &input);     // count.cc
         CharInfo const &info() const;       // inline function
     private:
-        Action locate(unsigned char ch, size_t &index) const;    // locat.cc
+        Action locate(unsigned char ch, std::size_t &index) const;    // locat.cc
 };
+
+#include "info.f"

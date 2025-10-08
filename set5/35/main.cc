@@ -1,4 +1,6 @@
-#include "charcount.ih"
+#include "main.ih"
+
+using namespace std;
 
 int main()
 {
