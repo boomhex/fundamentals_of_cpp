@@ -1,4 +1,4 @@
-#include "main.ih"
+#include "charcount.ih"
 
 using namespace std;
 
