@@ -7,4 +7,3 @@ ntbsarrcopy.cc
 ntbscopy.cc
 ntbssize.cc
 -main.cc
--display.cc

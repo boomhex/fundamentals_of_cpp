@@ -24,4 +24,8 @@ struct CharCount
         Action locate(unsigned char ch, std::size_t &index) const;    // locat.cc
 };
 
+<<<<<<< HEAD
 #include "info.f"
+=======
+#include "info.i"
+>>>>>>> f54d806b30235669e0100e5e76d0895aece4203e

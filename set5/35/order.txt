@@ -1,11 +1,9 @@
 descr1.txt
 charcount.h
-info.[f]
+info.i
 charcount.ih
 count.cc
 locate.cc
 showchar.cc
 -test.txt
--test_file.pdf
-main.ih
 main.cc
