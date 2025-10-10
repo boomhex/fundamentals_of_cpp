@@ -1,0 +1,50 @@
+- Six variants of new:
+
+1: new int, delete int
+This is appropriate to use like this:
+int *intp = new int();
+delete intp;
+Because:
+When defining a pointer to an integer, you can use new to allocate the memory.
+And delete to release the memory.
+
+2: new int[], delete[]
+This is appropriate to use like this:
+int *intarr = new int[8]();
+delete[] intarr;
+Because:
+When defining a pointer, you can use the brackets to allocate a specified
+amount of elements that are consecutive in memory. Using brackets in delete
+allows you to free that memory.
+
+3: new string(4, ' ')
+This is appropriate to use like this:
+string *strp = new string(4, ' ');
+Because:
+When defining a pointer to a string it is useful to initialize the pointee
+under the AI principle. This is a clean way to initialize a string to 4 blanks
+
+4: Type *new(void *memory) Type{ arguments };
+This is appropriate to use like this:
+char *buffer = new char[sizeof(int)];
+int *intptr = new(otherMemory) int();
+intptr->~int();
+Because:
+This way, you assign memory that was previously assigned to something else
+to your new pointer.
+
+5: new MyObj
+This is appropriate to use like this:
+MyObj *classPtr = new MyObj;
+classPtr->~MyObj();
+Because:
+This way, you create a pointer to an object where the default constructor is
+called, constructing the object in you newly allocated memory.
+
+6: operator new
+This is appropriate to use like this:
+char *chPtr = static_cast<char *>(operator new(3 * sizeof(char)));
+operator delete(chPtr);
+Because:
+This way, you allocate raw memory and assign it to a char pointer. While also
+casting it as a character.
