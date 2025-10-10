@@ -8,20 +8,20 @@ struct Char
 
 struct CharInfo
 {
-    Char *ptr = nullptr;
-    std::size_t nCharObj = 0;
+    Char *ptr = new Char[8];
+    std::size_t nCharObj = 8;
 };
 
 struct CharCount
 {
     enum Action {APPEND, INSERT, INC};      // All actions
     CharInfo d_info;
-    
+
     public:
         std::size_t count(std::istream &input);     // count.cc
-        CharInfo const &info() const;       // inline function
+        CharInfo const &info() const;               // info.i
     private:
-        Action locate(unsigned char ch, std::size_t &index) const;    // locat.cc
+        Action locate(unsigned char ch, std::size_t &index) const;    // locate.cc
 };
 
 #include "info.i"

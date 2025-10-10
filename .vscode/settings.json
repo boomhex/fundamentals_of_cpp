@@ -67,6 +67,7 @@
         "text_encoding": "cpp",
         "thread": "cpp",
         "*.f": "cpp",
-        "*.h": "cpp"
+        "*.h": "cpp",
+        "*.i": "cpp",
     }
 }
