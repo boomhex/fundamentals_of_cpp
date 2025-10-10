@@ -3,21 +3,21 @@
 
 class Value
 {
-    union Data
+    union
     {
-        int i_data;
-        char c_data;
-        double f_data;
+        int u_int;
+        char u_char;
+        double u_double;
     };
 
-    Data u_data;
     Token d_type;
 
     public:
         Value();                // value1.cc
         Value(int value);       // value2.cc
         Value(double value);    // value3.cc
-        Value(int idx, Token token);    // value4.cc
+        Value(char value);      // value4.cc
+        Value(int idx, Token token);    // value5.cc
 
         // Accessors:
         int intValue()          const;  // intvalue1.cc

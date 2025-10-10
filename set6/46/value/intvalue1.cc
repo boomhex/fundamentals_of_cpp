@@ -3,8 +3,7 @@
 int Value::intValue()   const
 {
     if (d_type != INT)
-    {
         cerr << "WARNING: Int value requested from non-int Value obj.";
-    }
-    return u_data.i_data;
+
+    return u_int;
 }

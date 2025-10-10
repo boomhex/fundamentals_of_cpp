@@ -4,17 +4,29 @@
 class Symbol
 {
 
-    string d_name;
+    enum CompareResult
+    {
+        LHS_FIRST,
+        RHS_FIRST,
+        EQUAL
+    };
+
+    std::string d_name;
     Value d_value;
 
     public:
-        Symbol(string input);   // symbol1.cc
-        Symbol(int value);      // symbol2.cc
-        Symbol(double value);   // symbol3.cc
+        Symbol(std::string name, int value);        // symbol1.cc
+        Symbol(std::string name, double value);     // symbol2.cc
 
-        Value const &value();          // value.cc
+        Value const &value()    const;          // value.cc
+        int intValue()          const;          // intvalue.cc
+        double doubleValue()    const;          // doublevalue.cc
+        char charValue()        const;          // charvalue.cc
+        Token token()           const;          // token.cc
 
         void assign(Value const &value);    // assign.cc
+
+        CompareResult compare(std::string const &rhs)   const;  // compare.cc
 };
 
 

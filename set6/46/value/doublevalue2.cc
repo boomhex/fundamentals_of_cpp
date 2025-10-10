@@ -2,6 +2,6 @@
 
 void Value::doubleValue(double value)
 {
-    u_data.f_data = value;
+    u_double = value;
     d_type = DOUBLE;
 }

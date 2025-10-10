@@ -2,6 +2,6 @@
 
 void Value::intValue(int value)
 {
-    u_data.i_data = value;
+    u_int = value;
     d_type = INT;
 }

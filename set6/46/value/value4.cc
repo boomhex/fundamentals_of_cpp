@@ -1,8 +1,9 @@
 #include "value.ih"
 
-Value::Value(int index, Token token)
+Value::Value(char value)
+:
+    u_char(value),
+    d_type(CHAR)
 {
-    u_data.i_data = index;
-    d_type = token;
-    requireSpecial(token);
+
 }
