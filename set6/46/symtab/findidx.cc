@@ -11,7 +11,7 @@ size_t Symtab::findIdx(string const &ident)
         mid = (begin + end) / 2;
 
         if (d_symbols[mid]->ident() < ident)      // Check lexicographic order
-            begin = mid + 1;                           // And half search space
+            begin = mid + 1;                      // And half search space
         else
             end = mid;
     }
