@@ -1,0 +1,3 @@
+This program showcases the implementation fo 3 classes symtab, symbol and
+value. That store values in a symbol table in lexicographical order by the
+symbol's identifier.
