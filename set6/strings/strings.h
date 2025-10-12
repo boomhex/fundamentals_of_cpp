@@ -19,6 +19,7 @@ class Strings
         Strings(size_t argc, char **argv);
         Strings(char **environLike);
         Strings(std::istream &in);
+        ~Strings();
 
         void swap(Strings &other);              
 
