@@ -2,6 +2,10 @@
 
 void Strings::fill(char **ntbs)
 {
-    for (size_t index = 0; index != d_size; ++index)
-        d_str[index] = ntbs[index];
+    reserve(d_size);     // capacity-only; cheap, copies pointers
+    resize(d_size); 
+
+    // Assign contents into the first n strings
+    for (size_t idx = 0; idx != d_size; ++idx)
+        *d_str[idx] = ntbs[idx];
 }
