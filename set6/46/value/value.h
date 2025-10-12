@@ -1,6 +1,9 @@
 #ifndef INCLUDED_VALUE_H_
 #define INCLUDED_VALUE_H_
 
+#include "value.h"
+#include "token.h"
+
 class Value
 {
     union

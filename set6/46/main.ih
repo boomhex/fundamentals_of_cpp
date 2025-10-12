@@ -1,4 +1,4 @@
-#include "symtab/symtab.h"
+#include "symtab.h"
 #include <iostream>
 
 using namespace std;

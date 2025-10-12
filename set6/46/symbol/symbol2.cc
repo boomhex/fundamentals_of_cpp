@@ -1,8 +1,8 @@
 #include "symbol.ih"
 
-Symbol::Symbol(string name, double value)
+Symbol::Symbol(string ident, double value)
 :
-    d_name(name),
+    d_name(ident),
     d_value(value)
 {
 

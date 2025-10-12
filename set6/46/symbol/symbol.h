@@ -1,6 +1,11 @@
 #ifndef INCLUDED_SYMBOL_H_
 #define INCLUDED_SYMBOL_H_
 
+#include <iosfwd>
+#include <string>
+#include "value.h"
+#include "token.h"
+
 class Symbol
 {
 
@@ -15,9 +20,10 @@ class Symbol
     Value d_value;
 
     public:
-        Symbol(std::string name, int value);        // symbol1.cc
-        Symbol(std::string name, double value);     // symbol2.cc
+        Symbol(std::string ident, int value);        // symbol1.cc
+        Symbol(std::string ident, double value);     // symbol2.cc
 
+        std::string const &ident()   const;      // name.cc
         Value const &value()    const;          // value.cc
         int intValue()          const;          // intvalue.cc
         double doubleValue()    const;          // doublevalue.cc
