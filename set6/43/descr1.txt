@@ -1,0 +1,32 @@
+The problem with the Strings class is that there is no destructor. 
+this can cause memory leaks. to solve this we can add a destructor in the 
+class implimentation.
+
+1. The reason that there are 2 overloaded at functions, is so it works with
+const strings and non-const strings
+For example:
+	-	std::string &at(size_t idx);
+        Used when the Strings object is not const.
+        It returns a non-const reference, meaning the caller can change the
+        string in memory.
+        Strings s{cin};
+        s.at(0) = “New first line”;   // allowed
+	-	std::string const &at(size_t idx) const;
+        Used when the Strings object is const (or accessed through a const
+        reference). It returns a const reference, meaning the caller can read
+        the string but cannot modify it.
+        const Strings s{cin};
+        cout << s.at(0);              // allowed
+        s.at(0) = “oops”;             // not allowed
+
+2. In the abovementioned main function, the non-const version is used.
+Even though the main function never changes the strings, 
+it is first defined as a non const. so it uses the non-const at member.
+
+3. To use the 'other' at member you can use this code example.
+    -   const Strings s{cin};
+        cout << s.at(0);
+
+With this code the const &at is used. because Strings is defined as a const.
+
+

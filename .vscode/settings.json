@@ -69,5 +69,6 @@
         "*.f": "cpp",
         "*.h": "cpp",
         "*.i": "cpp",
+        "numbers": "cpp"
     }
 }
