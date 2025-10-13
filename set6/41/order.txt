@@ -1,0 +1,15 @@
+descr1.txt
+charcount.h
+charcount.ih
+actions.cc
+charcount1.cc
+charcount2.cc
+count.cc
+enlarge.cc
+ensurecapacity.cc
+increasechar.cc
+insertchar.cc
+locate.cc
+showchar.cc
+-main.cc
+-test.txt
