@@ -3,8 +3,8 @@
 
 #include <iosfwd>
 #include <string>
-#include "value.h"
-#include "token.h"
+#include "../value/value.h"
+#include "../token/token.h"
 
 class Symbol
 {

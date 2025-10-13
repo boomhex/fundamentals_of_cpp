@@ -1,5 +1,4 @@
 #include "symtab.h"
-#include "symbol.h"
 #include <string>
 #include <iostream>
 

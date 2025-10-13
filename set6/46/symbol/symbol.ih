@@ -1,6 +1,4 @@
 #include "symbol.h"
-#include "value.h"
-#include "token.h"
 #include <string>
 
 using namespace std;
