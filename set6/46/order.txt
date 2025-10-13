@@ -15,7 +15,7 @@ value/charvalue1.cc
 value/token.cc
 value/intvalue2.cc
 value/doublevalue2.cc
-value/charvalue.cc
+value/charvalue2.cc
 value/requirespecial.cc
 symbol/symbol.ih
 symbol/symbol1.cc
