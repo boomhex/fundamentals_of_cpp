@@ -1,8 +1,7 @@
 #ifndef INCLUDED_VALUE_H_
 #define INCLUDED_VALUE_H_
 
-#include "value.h"
-#include "token.h"
+#include "../token/token.h"
 
 class Value
 {
@@ -33,8 +32,8 @@ class Value
         void doubleValue(double value); // doublevalue2.cc
         void charValue(char value);     // charvalue2.cc
 
-    private:
         void requireSpecial(Token token); // requirespecial.cc
+    private:
 };
 
 
