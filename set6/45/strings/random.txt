@@ -1,9 +1,0 @@
-This error is a classic C++ const-correctness pitfall:
-
-You cannot implicitly convert T** to const T**.
-
-Returning const std::string** from a const member function while your stored pointer is std::string** is unsafe, because it could allow writing a const std::string* into your internal array of std::string* (violating const).
-
-Why T** → const T** is invalid
-
-If the conversion were allowed, code like this would compile:
