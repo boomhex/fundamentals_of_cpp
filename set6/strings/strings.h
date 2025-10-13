@@ -27,7 +27,7 @@ class Strings
 
         size_t size() const;
         size_t capacity() const;
-        std::string const **data() const;
+        std::string **data();
         POD release();
 
         std::string const &at(size_t idx) const;
@@ -60,7 +60,7 @@ inline size_t Strings::capacity() const
     return d_capacity;
 }
 
-inline std::string const **Strings::data() const
+inline std::string **Strings::data()
 {
     return d_str;
 }

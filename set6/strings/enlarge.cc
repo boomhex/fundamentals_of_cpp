@@ -6,7 +6,7 @@ string **Strings::enlarge()
 
     string **ret = rawPointers(newCap);
 
-    for (size_t idx = 0; idx < d_size; ++idx)
+    for (size_t idx = 0; idx != d_size; ++idx)
         ret[idx] = d_str[idx];
 
     d_capacity = newCap;

@@ -9,7 +9,7 @@ void Strings::reserve(size_t nr)
     string **tmp = rawPointers(nr);
 
     // copy existing pointers; strings themselves are untouched
-    for (size_t idx = 0; idx < d_size; ++idx)
+    for (size_t idx = 0; idx != d_size; ++idx)
         tmp[idx] = d_str[idx];
 
     // free old pointer array and install the new one
