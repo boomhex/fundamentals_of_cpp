@@ -1,0 +1,9 @@
+This program is an exercise in improving memory management efficiency 
+within a class called CharCount. The original implementation required 
+copying the entire data structure whenever a new character was added, 
+leading to poor performance. In this improved version, 
+the class dynamically manages memory by starting with an initial capacity 
+of 8 and doubling it each time the capacity limit is reached. Additionally, 
+an array of pointers to member functions is introduced to eliminate the 
+need for a switch statement, allowing direct and efficient invocation of 
+the appropriate actions.
