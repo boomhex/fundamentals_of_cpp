@@ -1,0 +1,9 @@
+This program implements a custom Strings container that stores an 
+array of pointers to std::string objects (a “double-pointer” design). 
+It grows efficiently using a doubling strategy so only the pointer 
+array is reallocated, while the actual strings stay put. 
+there are public reserve, resize, size, and capacity members.
+reserving adjusts storage only, resizing creates or deletes string objects. 
+Utilities like fill, add, swap, and an optional release enable safe population,
+insertion, fast swapping, and (if needed) transferring ownership of the 
+internal storage.
