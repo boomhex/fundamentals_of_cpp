@@ -12,6 +12,7 @@ size_t CharCount::count(istream &input)
         Action action  = locate(inCh, index);
         // pointer that points to the correct function.
         (this->*d_actions[action])(index, inCh);
+        ++total;
     }
     return total;
 }

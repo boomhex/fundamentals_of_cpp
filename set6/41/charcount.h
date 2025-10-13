@@ -1,6 +1,4 @@
-#include <iostream>
-
-
+#include <iosfwd>
 
 struct CharCount
 {
@@ -14,7 +12,7 @@ struct CharCount
     {
         Char *ptr = nullptr;
         std::size_t nCharObj = 0;
-        std::size_t cap   = 0;
+        std::size_t cap = 0;
     };
 
     enum Action {APPEND, INSERT, INC, NUM_ACTIONS};      // All actions
