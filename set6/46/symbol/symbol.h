@@ -23,7 +23,7 @@ class Symbol
         Symbol(std::string ident, int value);        // symbol1.cc
         Symbol(std::string ident, double value);     // symbol2.cc
 
-        std::string const &ident()   const;      // name.cc
+        std::string const &ident()   const;     // ident.cc
         Value const &value()    const;          // value.cc
         int intValue()          const;          // intvalue.cc
         double doubleValue()    const;          // doublevalue.cc

@@ -2,7 +2,7 @@
 
 void Symtab::enlarge(size_t newCap)
 {
-    Symbol **newPtr = new Symbol*[newCap]();
+    Symbol **newPtr = new Symbol*[newCap]();    // init to nullptr
 
     for (size_t idx = 0; idx != d_size; ++idx)
         newPtr[idx] = d_symbols[idx];   // Copy pointers
