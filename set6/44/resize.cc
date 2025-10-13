@@ -16,7 +16,6 @@ void Strings::resize(size_t nr)
         d_size = nr;
         return;
     }
-    
     reserve(nr);
 
     for (size_t idx = d_size; idx != nr; ++idx)
