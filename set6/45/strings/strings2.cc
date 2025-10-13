@@ -2,8 +2,10 @@
 
 Strings::Strings(size_t argc, char **argv)
 :
-    d_size(argc),
-    d_str(new string[argc])
+    d_size(0),
+    d_capacity(1),
+    d_str(rawStrings(1))
 {
-    fill(argv);
+    for (char **chptr = argv, **end = argv + argc; chptr != end; ++chptr)
+        add(string{ *chptr });
 }

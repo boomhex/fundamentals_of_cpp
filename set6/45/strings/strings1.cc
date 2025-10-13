@@ -3,5 +3,6 @@
 Strings::Strings()
 :
     d_size(0),
-    d_str(0)
+    d_capacity(1),
+    d_str(rawStrings(1))
 {}

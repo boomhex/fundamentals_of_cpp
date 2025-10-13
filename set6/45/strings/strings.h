@@ -6,24 +6,26 @@
 class Strings
 {
     size_t d_size;
-    std::string **d_str;
+    size_t d_capacity;
+    std::string *d_str = 0;
 
     public:
         struct POD
         {
             size_t      size;
-            std::string **str;
+            std::string *str;
         };
 
         Strings();
         Strings(size_t argc, char **argv);
         Strings(char **environLike);
         Strings(std::istream &in);
+        ~Strings();
 
         void swap(Strings &other);              
 
         size_t size() const;
-        std::string const *const *data() const;
+        std::string const *data() const;
         POD release();
 
         std::string const &at(size_t idx) const;
@@ -35,9 +37,14 @@ class Strings
         void fill(char **ntbs);                    // fill prepared d_str
 
         std::string &safeAt(size_t idx) const;      // private backdoor
-        std::string *enlarge();
 
         static size_t count(char **environLike);   // # elements in env.like
+
+        void reserve(size_t num);
+        void resize(size_t newSize);
+        void destroy();
+
+        std::string *rawStrings(size_t nStrings);
 };
 
 inline size_t Strings::size() const         // potentially dangerous practice:
@@ -45,7 +52,7 @@ inline size_t Strings::size() const         // potentially dangerous practice:
     return d_size;
 }
 
-inline std::string const *const *Strings::data()    const
+inline std::string const *Strings::data()    const
 {
     return d_str;
 }

@@ -2,6 +2,6 @@
 
 void Strings::fill(char **ntbs)
 {
-    for (size_t index = 0; index != d_size; ++index)
-        d_str[index] = ntbs[index];
+    for (char const * const *ptr = ntbs; *ptr; ++ptr)
+        add(string{ *ptr });
 }

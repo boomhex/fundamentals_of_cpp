@@ -2,8 +2,9 @@
 
 Strings::Strings(char **environLike)
 :
-    d_size(count(environLike)),
-    d_str(new string[d_size])
+    d_size(0),
+    d_capacity(1),
+    d_str(rawStrings(1))
 {
     fill(environLike);
 }

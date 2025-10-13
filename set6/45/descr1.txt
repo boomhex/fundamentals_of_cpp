@@ -1,0 +1,2 @@
+This implementation of the class Strings uses the placement new operator to
+allocate memory for new data.
