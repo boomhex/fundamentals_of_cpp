@@ -2,7 +2,7 @@
 
 string **Strings::enlarge()
 {
-    size_t newCap = d_capacity * 2;
+    size_t newCap = d_capacity * 2;         // capacity x2
 
     string **ret = rawPointers(newCap);
 
