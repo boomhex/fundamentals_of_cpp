@@ -16,4 +16,5 @@ strings/reserve.cc
 strings/resize.cc
 strings/destroy.cc
 strings/rawstrings.cc
+-strings/frame
 -strings/main.cc
