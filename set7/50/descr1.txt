@@ -1,0 +1,9 @@
+This program tries to open out1 and out2, if they don't exist then it creates
+them. In the files it writes "hello world".
+
+The reason why at first the program only created out1 and not out2 is that
+for out1 it uses ofstream(), this function can write and open files.
+
+for out2 it uses fstream(), by default this function cannot create a new file, 
+only read (ios::in) and write (ios::out). But when you give it the possiblity 
+to create new files (ios::trunc), then the program works as expected
