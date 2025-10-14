@@ -1,0 +1,21 @@
+This program shows the difference between checking for a fail bit 
+and not checking it.
+
+Without the if statement:
+    ./a.out 100000000  1.53s user 0.01s system 80% cpu 1.918 total
+
+With the if statement:
+    ./a.out 100000000  0.23s user 0.01s system 34% cpu 0.710 total
+
+There is quite a big difference. This is because with the if-statement the
+program does a simple boolean check. This is very low in computation and 
+when the failbit is set, it never enters the if-statement
+
+If the if-statement is not there then every loop it will enter the iostream 
+library and it starts checking a lot of stuff before realizing that the 
+failbit is set. only then does it stop. This takes way longer than 
+first checking the failbit.
+
+Rule of thumb:
+Always check if outputting is enabled before trying to output, 
+to save rescources and time
