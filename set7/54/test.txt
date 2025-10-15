@@ -1,0 +1,9 @@
+this is a test file
+
+The class Fch only has two public members: its constructor and a member run. The member run returns 1 or 0, which are the program's exit values. 1 is returned if the input file could not be opened. Otherwise 0 is returned.
+
+The constructor calls its member openInput to open its d_input input stream. If opening d_input succeeds the member searchReplace is called, which interactively requests the (d_target) target text (i.e., the text to change in lines from d_input and the (d_replacement) replacement text.
+
+The main function then returns the value returned by Fch::run which performs the actual change operations. Fch::run reads all lines from d_input and processes each line in turn.
+
+Processing a line can be done in three ways: by default the user is asked whether a modification should be accepted or not. The user may also specify that from now on all modifications must be accepted (so, no further questions), or the user may specify that from now on no more modifications are accepted (also: no more questions). To specify the type of action define and use an Action enumeration with values
