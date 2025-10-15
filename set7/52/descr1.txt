@@ -1,0 +1,6 @@
+This program defines a custom stream manipulator now that writes the current
+local time to an output stream using std::put_time with the format %H:%M:%S.
+It gets the current epoch time with time(0), converts it to a tm via
+std::localtime, and formats it without adding its own newline. The main
+function demonstrates usage by inserting now into std::cout and then explicitly
+printing a newline.
