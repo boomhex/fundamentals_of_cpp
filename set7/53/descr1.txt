@@ -1,0 +1,5 @@
+This program prints the same double value (12.04) six times in a single chained
+cout statement. Each time inside quotes within a 15-character field. It
+demonstrates width, alignment, and precision formatting using manipulators:
+setw, left/right, setprecision, showpoint, fixed, and defaultfloat. The lines
+show the required formats from the assignment.
