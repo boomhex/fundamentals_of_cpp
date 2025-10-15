@@ -13,5 +13,6 @@ void Fch::searchReplace()
     else
     {
         cerr << "Target is empty. No changes will be made\n";
+        d_action = NO_CHANGES;
     }
 }

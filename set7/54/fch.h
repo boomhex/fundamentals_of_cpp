@@ -11,9 +11,13 @@ class Fch
         CHANGE_ALL,
         NO_CHANGES
     };
-    std::istream *d_input;
+    std::fstream *d_input;
+    bool d_opened;
     std::string d_target;
     std::string d_replacement;
+    std::string d_line;
+    size_t d_pos = 0;
+    Action d_action = ASK;
     public:
         Fch(char const *fname);         // maybe 0
         int run();

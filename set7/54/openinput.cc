@@ -2,8 +2,10 @@
 
 bool Fch::openInput(char const *fname)
 {
-    fstream fs{ fname, ios::in | ios::out};
-    if (!fs)
+    static fstream fs;
+    fs.clear();
+    fs.open(fname);
+    if (!d_input)
         return false;
     d_input = &fs;
     return true;

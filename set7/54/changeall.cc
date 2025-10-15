@@ -2,5 +2,6 @@
 
 void Fch::changeAll()
 {
-
+    while (findTarget())
+        modify();
 }

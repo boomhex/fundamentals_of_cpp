@@ -2,6 +2,7 @@
 
 Fch::Fch(char const *fname)
 {
-    if (openInput(fname))
+    d_opened = openInput(fname);
+    if (d_opened)
         searchReplace();
 }
