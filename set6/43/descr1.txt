@@ -24,8 +24,8 @@ Even though the main function never changes the strings,
 it is first defined as a non const. so it uses the non-const at member.
 
 3. To use the 'other' at member you can use this code example.
-    -   const Strings s{cin};
-        cout << s.at(0);
+    -   Strings const str{ cin };
+        cout << str.at(0);
 
 With this code the const &at is used. because Strings is defined as a const.
 
