@@ -1,4 +1,4 @@
-#include "charcount.ih"
+#include "main.ih"
 
 void showChar(unsigned char ch)
 {
