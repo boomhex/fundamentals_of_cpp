@@ -2,5 +2,5 @@
 
 Strings::~Strings()
 {
-    delete[] d_str;
+    destroy();
 }

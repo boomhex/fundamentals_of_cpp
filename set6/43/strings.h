@@ -37,6 +37,7 @@ class Strings
 
         std::string &safeAt(size_t idx) const;      // private backdoor
         std::string *enlarge();
+        void destroy();
 
         static size_t count(char **environLike);   // # elements in env.like
 };
