@@ -1,4 +1,7 @@
-#include "strings.ih"
+#include "strings/strings.h"
+#include <iostream>
+
+using namespace std;
 
 int main()
 {
