@@ -1,0 +1,14 @@
+#include "lock.h"
+
+#include <iostream>
+#include <fstream>
+#include <filesystem>
+#include <string>
+
+// POSIX / system headers (OK to use for syscalls)
+#include <sys/file.h>   // flock, LOCK_EX
+#include <fcntl.h>      // open, O_CREAT, O_TRUNC, O_RDWR
+#include <unistd.h>     // close
+#include <libgen.h>     // dirname, basename
+
+using namespace std;
