@@ -15,9 +15,9 @@ For example:
         Used when the Strings object is const (or accessed through a const
         reference). It returns a const reference, meaning the caller can read
         the string but cannot modify it.
-        const Strings s{cin};
-        cout << s.at(0);              // allowed
-        s.at(0) = “oops”;             // not allowed
+        const Strings str{ cin };
+        cout << str.at(0);              // allowed
+        str.at(0) = “oops”;             // not allowed
 
 2. In the abovementioned main function, the non-const version is used.
 Even though the main function never changes the strings, 
