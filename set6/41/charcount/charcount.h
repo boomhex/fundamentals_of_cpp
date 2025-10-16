@@ -1,3 +1,6 @@
+#ifndef INCLUDED_CHARCOUNT_
+#define INCLUDED_CHARCOUNT_
+
 #include <iosfwd>
 
 struct CharCount
@@ -50,3 +53,4 @@ inline std::size_t CharCount::capacity() const
 }
 
 
+#endif

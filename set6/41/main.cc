@@ -1,4 +1,6 @@
-#include "charcount.ih"
+#include "charcount/charcount.ih"
+#include <iostream>
+
 
 int main()
 {
