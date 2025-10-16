@@ -1,4 +1,4 @@
-#include "strings.ih"
+#include "../include/strings.ih"
 
 // static
 size_t Strings::count(char **environLike)

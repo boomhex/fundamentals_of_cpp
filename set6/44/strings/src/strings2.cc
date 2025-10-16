@@ -1,4 +1,4 @@
-#include "strings.ih"
+#include "../include/strings.ih"
 
 Strings::Strings(size_t argc, char **argv)
 :
