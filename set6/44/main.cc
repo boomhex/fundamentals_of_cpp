@@ -1,9 +1,9 @@
-#include "strings/strings.h"
+#include "strings/include/strings.h"
 #include <iostream>
 
 using namespace std;
 
-int main()
+int main(int argc, char **argv)
 {
     Strings strings{ cin };
 

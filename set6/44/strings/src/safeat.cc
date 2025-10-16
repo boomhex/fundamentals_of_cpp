@@ -1,6 +1,7 @@
 #include "../include/strings.ih"
 
-namespace {
+namespace
+{
     string emptyString;
 }
 

@@ -7,7 +7,6 @@ void Strings::reserve(size_t newCap)
 
     string **tmp = rawPointers(newCap); // create new ptr arr
     copyStrs(tmp);  // copy d_strs into new arr
-
     destroyArr();   // destroy old ptr arrs
     d_str = tmp;
     d_capacity = newCap;

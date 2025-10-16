@@ -33,8 +33,8 @@ class Strings
         std::string const &at(size_t idx) const;
         std::string &at(size_t idx);
 
-        void reserve(std::size_t newCap);
-        void resize(std::size_t newSize);
+        void reserve(std::size_t newCap);   // reserve memory
+        void resize(std::size_t newSize);   // resize memory capacity
 
         void add(std::string const &next);          // add another element
 
@@ -42,7 +42,7 @@ class Strings
         void fill(char **ntbs);                    // fill prepared d_str
 
         std::string &safeAt(size_t idx) const;      // private backdoor
-        void **enlarge();
+        void enlarge();     // multiply cap by 2
 
         void destroyArr();     // destroy ptr arr
 
