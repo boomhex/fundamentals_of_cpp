@@ -9,13 +9,13 @@ For example:
         Used when the Strings object is not const.
         It returns a non-const reference, meaning the caller can change the
         string in memory.
-        Strings s{cin};
-        s.at(0) = “New first line”;   // allowed
+        Strings str{ cin };
+        str.at(0) = “New first line”;   // allowed
 	-	std::string const &at(size_t idx) const;
         Used when the Strings object is const (or accessed through a const
         reference). It returns a const reference, meaning the caller can read
         the string but cannot modify it.
-        const Strings str{ cin };
+        Strings const str{ cin };
         cout << str.at(0);              // allowed
         str.at(0) = “oops”;             // not allowed
 
