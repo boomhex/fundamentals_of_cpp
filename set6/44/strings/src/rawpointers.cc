@@ -1,6 +1,6 @@
 #include "../include/strings.ih"
 
-string **Strings::rawPointers(size_t n)
+string **Strings::rawPointers(size_t nPointers)
 {
-    return new string *[n];
+    return new string *[nPointers]();
 }

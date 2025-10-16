@@ -1,19 +1,14 @@
 #include "../include/strings.ih"
 
-void Strings::reserve(size_t nr)
+void Strings::reserve(size_t newCap)
 {
-    if (nr <= d_capacity)               // reserving smaller: do nothing
+    if (newCap <= d_capacity)               // reserving smaller: do nothing
         return;
 
-    // allocate a new pointer array of size nr
-    string **tmp = rawPointers(nr);
+    string **tmp = rawPointers(newCap); // create new ptr arr
+    copyStrs(tmp);  // copy d_strs into new arr
 
-    // copy existing pointers
-    for (size_t idx = 0; idx != d_size; ++idx)
-        tmp[idx] = d_str[idx];
-
-    // free old pointer array
-    delete[] d_str;
+    destroyArr();   // destroy old ptr arrs
     d_str = tmp;
-    d_capacity = nr;
+    d_capacity = newCap;
 }

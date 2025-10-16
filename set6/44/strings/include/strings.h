@@ -33,8 +33,8 @@ class Strings
         std::string const &at(size_t idx) const;
         std::string &at(size_t idx);
 
-        void reserve(std::size_t n);
-        void resize(std::size_t n);
+        void reserve(std::size_t newCap);
+        void resize(std::size_t newSize);
 
         void add(std::string const &next);          // add another element
 
@@ -42,12 +42,15 @@ class Strings
         void fill(char **ntbs);                    // fill prepared d_str
 
         std::string &safeAt(size_t idx) const;      // private backdoor
-        std::string **enlarge();
+        void **enlarge();
 
+        void destroyArr();     // destroy ptr arr
+
+        void copyStrs(std::string **to)     const;
 
         static size_t count(char **environLike);   // # elements in env.like
 
-        std::string **rawPointers(std::size_t n);
+        std::string **rawPointers(std::size_t nPointers);
 };
 
 inline size_t Strings::size() const         // potentially dangerous practice:
