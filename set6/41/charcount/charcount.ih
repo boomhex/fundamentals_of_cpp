@@ -3,5 +3,3 @@
 
 using namespace std;
 
-void showChar(unsigned char ch);
-

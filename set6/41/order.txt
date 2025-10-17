@@ -11,6 +11,7 @@ charcount/appendchar.cc
 charcount/increasechar.cc
 charcount/insertchar.cc
 charcount/locate.cc
-charcount/showchar.cc
+-charcount/showchar.cc
+-main.ih
 -main.cc
 -test.txt
