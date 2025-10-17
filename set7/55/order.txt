@@ -1,0 +1,10 @@
+descr1.txt
+lock/include/lock.h
+lock/include/lock.ih
+lock/src/lock1.cc
+lock/src/lock2.cc
+lock/src/lock3.cc
+lock/src/valid.cc
+lock/src/stringname.cc
+lock/src/lockpath.cc
+main.cc

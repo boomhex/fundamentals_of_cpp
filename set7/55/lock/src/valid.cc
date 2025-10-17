@@ -1,4 +1,4 @@
-#include "lock.ih"
+#include "../include/lock.ih"
 
 bool Lock::valid()  const
 {

@@ -1,5 +1,5 @@
 #ifndef _INCLUDED_LOCK_
-#define _INCLUDED_LOCK
+#define _INCLUDED_LOCK_
 
 #include <iosfwd>
 #include <string>
@@ -18,8 +18,8 @@ class Lock
         bool valid()    const;
 
     private:
-        static std::string stringName(char *(*funcPointer)(char*),
-                                char const *path);
+        static std::string stringName(std::string const &path,
+                                      char *(*funcPointer)(char*));
         std::string const lockPath(std::string const &path,
             std::string const &lockDir)    const;
 
