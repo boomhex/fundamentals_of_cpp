@@ -1,4 +1,4 @@
-#include "strings.ih"
+#include "../include/strings.ih"
 
 void Strings::resize(size_t newSize)
 {
@@ -10,9 +10,7 @@ void Strings::resize(size_t newSize)
         // delete strings that fall out of range
         for (string *begin = d_str + newSize, *end = d_str + d_size;
                 begin != end; ++begin)
-        {
             begin->~string();
-        }
         d_size = newSize;
         return;
     }

@@ -1,10 +1,10 @@
 #ifndef INCLUDED_SYMBOL_H_
 #define INCLUDED_SYMBOL_H_
 
-#include <iosfwd>
-#include <string>
 #include "../value/value.h"
 #include "../token/token.h"
+#include <iosfwd>
+#include <string>
 
 class Symbol
 {

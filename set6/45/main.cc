@@ -1,4 +1,7 @@
-#include "strings.ih"
+#include "strings/include/strings.h"
+#include <iostream>
+
+using namespace std;
 
 int main(int argc, char **argv, char **env)
 {

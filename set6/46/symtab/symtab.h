@@ -1,9 +1,9 @@
 #ifndef INCLUDED_SYMTAB_H_
 #define INCLUDED_SYMTAB_H_
 
-#include <iosfwd>
 #include "../symbol/symbol.h"
 #include "../token/token.h"
+#include <iosfwd>
 
 class Symtab
 {

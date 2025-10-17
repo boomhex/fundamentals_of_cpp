@@ -42,6 +42,7 @@ class Strings
 
         void reserve(size_t num);
         void resize(size_t newSize);
+        void enlarge();
         void destroy();
 
         std::string *rawStrings(size_t nStrings);

@@ -2,8 +2,7 @@
 
 Value::Value()
 :
-    u_int(0),
-    d_type(INT)
+    Value(0)
 {
 
 }
