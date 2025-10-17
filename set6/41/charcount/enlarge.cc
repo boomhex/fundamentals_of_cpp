@@ -6,7 +6,7 @@ void CharCount::enlarge()
     Char *newBlock = new Char[newCap];
 
     // copy all elements into new array
-    for (size_t idx = 0; idx < d_info.nCharObj; ++idx)
+    for (size_t idx = 0; idx != d_info.nCharObj; ++idx)
         newBlock[idx] = d_info.ptr[idx];
 
     delete[] d_info.ptr;                    // delete old pointer
