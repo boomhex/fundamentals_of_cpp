@@ -7,9 +7,9 @@ int main()
 
     const CharCount::CharInfo &info = charcount.info();
     
-    for (size_t i = 0; i < info.nCharObj; ++i) {
-        showChar(info.ptr[i].ch);
-        cout << info.ptr[i].freq << " times\n";
+    for (size_t idx = 0; idx != info.nCharObj; ++idx) {
+        showChar(info.ptr[idx].ch);
+        cout << info.ptr[idx].freq << " times\n";
     }
     cout << "\nFinal capacity: " << charcount.capacity() << "\n";
 }

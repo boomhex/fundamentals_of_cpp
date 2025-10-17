@@ -9,7 +9,7 @@ size_t CharCount::count(istream &input)
     {
         size_t index = 0;                   // keeps track of char position
         // checks for action and position of char
-        Action action  = locate(inCh, index);
+        Action action  = locate(index, inCh);
         // pointer that points to the correct function.
         (this->*d_actions[action])(index, inCh);
         ++total;
