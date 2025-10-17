@@ -24,7 +24,7 @@ int *intptr = new(mem) int();
 intptr->~int();
 operator delete(mem);
 Because:
-This way, you assign memory that was previously assigned to something else
+This way, you assign memory that was previously unassigned to something else
 to your new pointer.
 
 4: operator new
@@ -40,6 +40,18 @@ This is appropriate to use like this:
 void *mem = operator new[](3 * sizeof(int));
 operator delete[](mem);
 Because:
-This way, you allocate a pointer array to integer pointers.
+you first obtain raw, uninitialized storage with operator new[]. Since you
+didn’t allocate the object with ordinary new, you must call the destructor
+explicitly and then free the raw storage with operator delete[].
 
-6:
+6: new *[]
+This is appropriate to use like this:
+string **strs = new string *[argc];
+for (size_t idx = 0; idx != argc; ++idx)
+    strs[idx] = new string{ argv[idx] };
+for (size_t idx = 0; idx != argc; ++idx)
+    delete strs[idx];
+delete[] strs;
+Because:
+You obtain an array of ptrs to strings, and you have to delete them one-by-one
+before you delete the array of pointers.
