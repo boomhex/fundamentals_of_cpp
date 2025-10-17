@@ -2,9 +2,7 @@
 
 Strings::Strings(istream &in)
 :
-    d_size(0),
-    d_capacity(1),
-    d_str(rawPointers(d_capacity))
+    Strings()
 {
     string line;
     while (getline(in, line))

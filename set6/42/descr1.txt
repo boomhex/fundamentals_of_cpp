@@ -26,9 +26,10 @@ under the AI principle. This is a clean way to initialize a string to 4 blanks
 
 4: Type *new(void *memory) Type{ arguments };
 This is appropriate to use like this:
-char *buffer = new char[sizeof(int)];
-int *intptr = new(otherMemory) int();
+char *mem = new char[sizeof(int)];
+int *intptr = new(mem) int();
 intptr->~int();
+operator delete(mem);
 Because:
 This way, you assign memory that was previously assigned to something else
 to your new pointer.
