@@ -1,4 +1,4 @@
-#include "../include/pacctfile.ih"
+#include "pacctfile.ih"
 
 void PacctFile::appendRecord(string &records, acct_v3 const &record)    const
 {

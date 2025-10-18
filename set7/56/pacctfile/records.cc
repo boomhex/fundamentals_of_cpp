@@ -1,4 +1,4 @@
-#include "../include/pacctfile.ih"
+#include "pacctfile.ih"
 
 string PacctFile::records()     const
 {

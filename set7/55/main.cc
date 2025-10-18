@@ -1,4 +1,4 @@
-#include "lock/include/lock.h"
+#include "lock/lock.h"
 #include <iostream>
 #include <fstream>
 

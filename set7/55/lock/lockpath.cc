@@ -1,4 +1,4 @@
-#include "../include/lock.ih"
+#include "lock.ih"
 
 string const Lock::lockPath(string const& path, string const& lockDir)    const
 {

@@ -1,4 +1,4 @@
-#include "../include/pacctfile.ih"
+#include "pacctfile.ih"
 
 // static
 string PacctFile::commToString(char const *comm){

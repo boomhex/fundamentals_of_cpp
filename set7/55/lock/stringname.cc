@@ -1,4 +1,4 @@
-#include "../include/lock.ih"
+#include "lock.ih"
 
 // static
 string Lock::stringName(string const &path, char *(*funcPointer)(char*))

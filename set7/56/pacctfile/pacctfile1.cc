@@ -1,4 +1,4 @@
-#include "../include/pacctfile.ih"
+#include "pacctfile.ih"
 
 PacctFile::PacctFile()
 :

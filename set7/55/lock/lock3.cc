@@ -1,4 +1,4 @@
-#include "../include/lock.ih"
+#include "lock.ih"
 
 Lock::~Lock()
 {

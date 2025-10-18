@@ -1,0 +1,4 @@
+Reads a “students” file and normalizes email addresses. Using a single fstream,
+it scans lines, detects those starting with email:, converts the address to
+lowercase via a lowercase(std::string) helper, and writes the result back,
+preserving all other content.
