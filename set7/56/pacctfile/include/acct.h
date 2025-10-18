@@ -1,10 +1,8 @@
 #ifndef _ACCT_H_
 #define _ACCT_H_
 
-
 #include <cstdint>
 #include <sys/acct.h>
-
 
 struct acct_v3
 {

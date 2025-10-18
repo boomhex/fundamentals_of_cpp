@@ -1,0 +1,14 @@
+descr1.txt
+pacctfile/include/pacctfile.h
+pacctfile/include/pacctfile.ih
+-pacctfile/include/acct.h
+pacctfile/src/pacctfile1.cc
+pacctfile/src/pacctfile2.cc
+pacctfile/src/pacctfile3.cc
+pacctfile/src/records.cc
+pacctfile/src/appendrecord.cc
+pacctfile/src/commtostring.cc
+main.ih
+allflag.cc
+inputpath.cc
+main.cc
