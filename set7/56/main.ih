@@ -1,5 +1,5 @@
 // Own includes:
-#include "pacctfile/include/pacctfile.h"
+#include "pacctfile/pacctfile.h"
 
 // cpp includes:
 #include <iostream>
@@ -7,5 +7,5 @@
 
 using namespace std;
 
-bool allFlag(size_t argc, char **argv);
+bool allFlag(size_t argc, char **argv);'?|?'
 string inputPath(size_t argc, char **argv);

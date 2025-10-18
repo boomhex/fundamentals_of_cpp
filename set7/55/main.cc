@@ -17,7 +17,7 @@ int main(int argc, char** argv)
     cout << "? ";           // Prompt after lock
     string inp;
     if (not getline(cin, inp))
-        return;
+        return 0;
 
     ofstream out(dataPath, ios::app);   // Write after lock
     out << inp << '\n';

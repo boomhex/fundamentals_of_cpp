@@ -11,6 +11,6 @@ fch/process.cc
 fch/request.cc
 fch/requestedN.cc
 fch/searchreplace.cc
-fch/showmodification.cc
+fch/showmodifications.cc
 fch/insertline.cc
 -main.cc
