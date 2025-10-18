@@ -2,8 +2,8 @@
 #define _INCLUDED_PACCTFILE_
 
 #include <string>
-// #include "acct.h" // Keeping this, since the linux didn't work on my machine
-#include "/usr/include/linux/acct.h" // Replacement for linux
+#include "acct.h" // Keeping this, since the linux didn't work on my machine
+// #include "/usr/include/linux/acct.h" // Replacement for linux
 
 class PacctFile
 {
