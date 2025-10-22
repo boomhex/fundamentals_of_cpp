@@ -75,6 +75,9 @@
         "fstream": "cpp",
         "iomanip": "cpp",
         "version": "cpp",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "__split_buffer": "cpp",
+        "codecvt": "cpp",
+        "semaphore": "cpp"
     }
 }

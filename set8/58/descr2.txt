@@ -1,0 +1,10 @@
+The integers do not seem uninitialized and are all zeros. So I will shoe using
+valgrind.
+Using valgrind, it shows this output (among more):
+
+"==1==    by 0x1091F7: Numbers::write(std::ostream&) const (in /work/app)
+==1==    by 0x10929B: main (in /work/app)
+==1== 
+==1== Use of uninitialised value of size 8"
+
+Showing the memory is uninitialized.
