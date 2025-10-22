@@ -1,4 +1,4 @@
-#include "strings/include/strings.h"
+#include "strings/strings.h"
 #include <iostream>
 
 using namespace std;
