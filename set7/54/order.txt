@@ -1,0 +1,16 @@
+fch/fch.h
+fch/fch.ih
+fch/fch.cc
+fch/run.cc
+fch/ask.cc
+fch/changeall.cc
+fch/findtarget.cc
+fch/modify.cc
+fch/openinput.cc
+fch/process.cc
+fch/request.cc
+fch/requestedN.cc
+fch/searchreplace.cc
+fch/showmodifications.cc
+fch/insertline.cc
+-main.cc

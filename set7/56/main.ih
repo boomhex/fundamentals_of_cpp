@@ -1,5 +1,5 @@
 // Own includes:
-#include "pacctfile/include/pacctfile.h"
+#include "pacctfile/pacctfile.h"
 
 // cpp includes:
 #include <iostream>

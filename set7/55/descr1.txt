@@ -1,0 +1,3 @@
+Implements a Lock class to safely control file access by multiple programs.
+It creates and manages .lck files using flock, ensuring exclusive access.
+A test program appends input to a file only after successfully obtaining the lock.
