@@ -6,6 +6,16 @@
 
 class Handler
 {
+    enum ACTION
+    {
+        INIT,
+        CONNECT,
+        ELEM,
+        FILL,
+        KILL,
+        SUM
+    };
+
     size_t d_argc;
     char **d_argv;
     Data *d_data;                   // points to the shared memory info
@@ -19,6 +29,7 @@ class Handler
         int run();
 
     private:
+        static int (Handler::*s_actionPtr[])();
         int initialize();           // create/initialize a shared mem. block
         int confirmConnect();        // connect the shared block d_argv[1]
         int element();              // show shared data element d_argv[2]
@@ -29,10 +40,13 @@ class Handler
         bool available(size_t nRequired);
         bool connect();
         bool specified(size_t nRequired);
+        bool validArgument(char ch);
 
         char *ntbsCopy(char const *ntbs);
 
         void destroyArgv();
+
+        ACTION correctAction(char ch)   const;
 };
 
 #endif
