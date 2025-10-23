@@ -1,8 +1,7 @@
 #include "strings.ih"
 
-Strings &Strings::operator=(Strings &&rhs)
+Strings &Strings::operator=(Strings &&tmp)
 {
-    if (this != &rhs)
-        swap(rhs);
+    swap(tmp);
     return *this;
 }

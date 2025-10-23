@@ -1,0 +1,7 @@
+This program defines a custom Strings class that manages a dynamic array
+of string pointers, providing full control over memory allocation and
+resizing. It supports adding, accessing, and reserving strings efficiently
+while ensuring no memory leaks through proper destruction. With the added
+copy and move constructors and assignment operators, the class now behaves
+as a safe, fully value-semantic type supporting deep copies and efficient
+moves.

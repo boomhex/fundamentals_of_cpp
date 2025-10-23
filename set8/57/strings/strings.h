@@ -25,8 +25,8 @@ class Strings
 
         Strings(Strings const &other);
         Strings(Strings &&other);
-        Strings &operator=(Strings const &rhs);
-        Strings &operator=(Strings &&rhs);
+        Strings &operator=(Strings const &other);
+        Strings &operator=(Strings &&tmp);
 
         void swap(Strings &other);              
 
