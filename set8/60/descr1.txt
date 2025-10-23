@@ -1,0 +1,4 @@
+Demonstrates copy elision and value semantics with a small Demo class.
+Constructors, destructor, copy/move ctors and assignments print when called.
+factory() plus std::move show: elision, move construction, copy assign,
+and move assign.

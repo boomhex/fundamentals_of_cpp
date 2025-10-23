@@ -1,0 +1,3 @@
+Implements a Numbers class that stores a fixed number of integers, supports
+copying, moving, and assignment. It provides at, length, and write
+functions, plus constructors to initialize elements or leave them uninitialized.
