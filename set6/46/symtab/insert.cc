@@ -7,10 +7,9 @@ void Symtab::insert(size_t idx, Symbol *symbolPtr)
         enlarge(d_capacity * 2);
 
     // Shift elements to right behind idx
-    for (size_t startShiftIdx = d_size; startShiftIdx-- != idx; )
+    for (size_t startShiftIdx = ++d_size; startShiftIdx-- != idx; ) {
         d_symbols[startShiftIdx] = d_symbols[startShiftIdx - 1];
-
+    }
     // Assign new inserted ptr
     d_symbols[idx] = symbolPtr;
-    ++d_size;
 }
