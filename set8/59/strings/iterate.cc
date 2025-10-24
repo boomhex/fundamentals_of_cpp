@@ -11,7 +11,6 @@ void Strings::iterate(char **environlike)
             add(*iterBegin);
             ++iterBegin;
         }
-        destroy();
-
+        clear();
     }
 }
