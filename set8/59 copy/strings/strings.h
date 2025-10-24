@@ -40,6 +40,7 @@ class Strings
         void fill(char *ntbs[]);                    // fill prepared d_str
 
         std::string &safeAt(size_t idx) const;      // private backdoor
+        std::string *enlarge();
         std::string *enlargeByCopy();
         std::string *enlargeByMove();
         void destroy();

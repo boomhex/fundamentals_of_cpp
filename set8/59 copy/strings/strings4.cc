@@ -3,9 +3,7 @@
 Strings::Strings(istream &in)
 :
     d_size(0),
-    d_str(0),
-    d_iterations(0),
-    d_enlarge(&Strings::enlargeByCopy)
+    d_str(0)
 {
     string line;
     while (getline(in, line))

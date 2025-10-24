@@ -3,9 +3,7 @@
 Strings::Strings(int argc, char **argv)
 :
     d_size(argc),
-    d_str(new string[argc]),
-    d_iterations(0),
-    d_enlarge(&Strings::enlargeByCopy)
+    d_str(new string[argc])
 {
     fill(argv);
 }

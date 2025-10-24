@@ -1,0 +1,11 @@
+
+
+Although the latter alternative works, it quickly gets hairy. In situations li
+ke these smart pointers should be used to prevent the hairiness. By defining the 
+
+
+stream pointers as (smart pointer) objects they will, once constructed, properly be 
+destroyed even if the rest of the constructor's code throws exceptions. Using 
+a FilterImp and two unique_ptr data members Filter's setup and its constructor
+becomes:
+
