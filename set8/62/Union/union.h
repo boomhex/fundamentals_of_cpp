@@ -1,20 +1,32 @@
 #ifndef DATA_H_INCLUDED
 #define DATA_H_INCLUDED
 
+#include <cstddef>
 #include <string>
 
 union Data
 {
-    enum Field
+    enum Type
     {
         DOUBLE,
         WORD,
         VALUE
     };
+    private: 
+        double *u_double;
+        std::string u_word;
+        size_t u_value;
 
-    double *u_double;
-    std::string u_word;
-    size_t value;
+        static void (Data::*s_destroy[3])();
+        static void (Data::*s_copy[3])(Data const &);
+        static void (Data::*s_move[3])(Data &);
+        static void (Data::*s_swap[3][3])(Data &);
+
+    Data(Data const &other, Type srcType);
+    Data(Data &&other, Type srcType);
+
+    void destroy(Type type);
+    void swap(Data &other, Type thisType, Type otherType);
 
     private:
         void destroyDouble();
@@ -41,10 +53,7 @@ union Data
         void swapValueDouble(Data &other);
         void swapValueWord(Data &other);
 
-        static void (Data::*s_destroy[3])();
-        static void (Data::*s_copy[3])(Data const &);
-        static void (Data::*s_move[3])(Data &);
-        static void (Data::*s_swap[3][3])(Data &);
+        
 };
 
 #endif
