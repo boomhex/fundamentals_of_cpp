@@ -1,0 +1,5 @@
+This program implements a new constructor in the strings class that lets you
+select whether to use move or copy in when enlarging a strings object for
+nIterations. It introduces a member iterate that performs nIterations of the
+specified method on an environlike pointer. In results.txt are the results of
+the timing experiment on 10000 iterations for both methods.

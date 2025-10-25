@@ -78,6 +78,8 @@
         "sstream": "cpp",
         "__split_buffer": "cpp",
         "codecvt": "cpp",
-        "semaphore": "cpp"
+        "semaphore": "cpp",
+        "__hash_table": "cpp",
+        "forward_list": "cpp"
     }
 }

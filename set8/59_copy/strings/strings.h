@@ -40,9 +40,9 @@ class Strings
         void fill(char *ntbs[]);                    // fill prepared d_str
 
         std::string &safeAt(size_t idx) const;      // private backdoor
+        std::string *enlarge();
         std::string *enlargeByCopy();
         std::string *enlargeByMove();
-        void clear();
         void destroy();
 
         static size_t count(char *environLike[]);   // # elements in env.like
