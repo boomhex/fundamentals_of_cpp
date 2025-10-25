@@ -34,7 +34,7 @@ union Data
         Data(Data &&other, Type srcType);
 
         void destroy(Type type);
-        void swap(Data &other, Type thisType, Type otherType);
+        void swap(Data &other, Type thisType, Type otherType);      // TODO
 
         // Accessors
         double *asDouble(Type type) const;
@@ -48,9 +48,9 @@ union Data
         void destroyValue();
 
         //copy members
-        void copyDouble(Data const &other);
-        void copyWord(Data const &other);
-        void copyValue(Data const &other);
+        void copyDouble(Data const &other);             // TODO
+        void copyWord(Data const &other);               // TODO
+        void copyValue(Data const &other);              // TODO
 
         // move members
         void moveDouble(Data &tmp);
@@ -58,17 +58,17 @@ union Data
         void moveValue(Data &tmp);
 
         // swap members
-        void swapDoubleDouble(Data &other);
-        void swapWordWord(Data &other);
-        void swapValueValue(Data &other);
+        void swapDoubleDouble(Data &other);             // TODO
+        void swapWordWord(Data &other);                 // TODO 
+        void swapValueValue(Data &other);               // TODO
 
-        void swapDoubleWord(Data &other);
-        void swapDoubleValue(Data &other);
-        void swapWordValue(Data &other);
+        void swapDoubleWord(Data &other);               // TODO
+        void swapDoubleValue(Data &other);              // TODO
+        void swapWordValue(Data &other);                // TODO
 
-        void swapWordDouble(Data &other);
-        void swapValueDouble(Data &other);
-        void swapValueWord(Data &other);
+        void swapWordDouble(Data &other);               // TODO
+        void swapValueDouble(Data &other);              // TODO
+        void swapValueWord(Data &other);                // TODO
 
         
 };

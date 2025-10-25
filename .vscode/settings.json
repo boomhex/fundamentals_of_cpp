@@ -81,6 +81,8 @@
         "semaphore": "cpp",
         "__hash_table": "cpp",
         "forward_list": "cpp",
-        "ranges": "cpp"
+        "ranges": "cpp",
+        "csignal": "cpp",
+        "__node_handle": "cpp"
     }
 }
