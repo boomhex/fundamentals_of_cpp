@@ -1,6 +1,6 @@
 #include "union.ih"
 
-void Data::destroyWord()
+void Data::destroyValue()
 {
-    u_word.~basic_string();
+    u_value = 0u;   // trivial
 }
