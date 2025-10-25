@@ -8,7 +8,7 @@ void Data::copyDouble(Data const &src)
         return;
     }
     double *buf = new double[10];
-    for (std::size_t i = 0; i != 10; ++i)
+    for (size_t i = 0; i != 10; ++i)
         buf[i] = src.u_double[i];
     u_double = buf;
 }
