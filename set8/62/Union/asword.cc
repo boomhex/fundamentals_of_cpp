@@ -1,6 +1,6 @@
 #include "union.ih"
 
-string &Data::asWord()
+string const &Data::asWord() const
 {
     return u_word;
 }

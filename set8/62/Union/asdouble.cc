@@ -1,6 +1,6 @@
 #include "union.ih"
 
-double *Data::asDouble() const
+double const *Data::asDouble() const
 {
-    return const_cast<double *>(u_double);
+    return u_double;
 }

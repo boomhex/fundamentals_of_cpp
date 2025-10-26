@@ -39,9 +39,9 @@ union Data
         void swap(Data &other, Type thisType, Type otherType);
 
         // Accessors
-        double *asDouble() const;
-        std::string &asWord();
-        std::size_t &asValue();
+        double const *asDouble() const;
+        std::string const &asWord() const;
+        size_t asValue() const;
 
     private:
         // destroy members
