@@ -33,13 +33,15 @@ union Data
         Data(Data const &other, Type srcType);
         Data(Data &&other, Type srcType);
 
+        ~Data();
+
         void destroy(Type type);
-        void swap(Data &other, Type thisType, Type otherType);      // TODO
+        void swap(Data &other, Type thisType, Type otherType);
 
         // Accessors
-        double *asDouble(Type type) const;
-        std::string &asWord(Type type);
-        std::size_t &asValue(Type type);
+        double *asDouble() const;
+        std::string &asWord();
+        std::size_t &asValue();
 
     private:
         // destroy members
@@ -48,9 +50,9 @@ union Data
         void destroyValue();
 
         //copy members
-        void copyDouble(Data const &other);             // TODO
-        void copyWord(Data const &other);               // TODO
-        void copyValue(Data const &other);              // TODO
+        void copyDouble(Data const &other);
+        void copyWord(Data const &other);
+        void copyValue(Data const &other);
 
         // move members
         void moveDouble(Data &tmp);
@@ -58,19 +60,17 @@ union Data
         void moveValue(Data &tmp);
 
         // swap members
-        void swapDoubleDouble(Data &other);             // TODO
-        void swapWordWord(Data &other);                 // TODO 
-        void swapValueValue(Data &other);               // TODO
+        void swapDoubleDouble(Data &other);
+        void swapWordWord(Data &other);
+        void swapValueValue(Data &other);
 
-        void swapDoubleWord(Data &other);               // TODO
-        void swapDoubleValue(Data &other);              // TODO
-        void swapWordValue(Data &other);                // TODO
+        void swapDoubleWord(Data &other);
+        void swapDoubleValue(Data &other);
+        void swapWordValue(Data &other);
 
-        void swapWordDouble(Data &other);               // TODO
-        void swapValueDouble(Data &other);              // TODO
-        void swapValueWord(Data &other);                // TODO
-
-        
+        void swapWordDouble(Data &other);
+        void swapValueDouble(Data &other);
+        void swapValueWord(Data &other);
 };
 
 #endif
