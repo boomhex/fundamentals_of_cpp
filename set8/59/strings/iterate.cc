@@ -6,11 +6,11 @@ void Strings::iterate(char **environlike)
     {
         char **iterBegin;
         iterBegin = environlike;
-        while (*iterBegin)
+        while (*iterBegin)  // Perform add iterations until nullptr
         {
             add(*iterBegin);
             ++iterBegin;
         }
-        clear();
+        clear();    // Clear for next iteration
     }
 }

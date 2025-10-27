@@ -1,6 +1,6 @@
 #include "arg.ih"
 
-void Arg::parseOpts(OptStructArray opts, LongOption const *const begin,
+void Arg::parseOpts(OptStructArray &opts, LongOption const *const begin,
     LongOption const *const end)
 {
     size_t size = end - begin;

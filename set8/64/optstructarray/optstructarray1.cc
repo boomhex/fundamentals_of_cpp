@@ -3,7 +3,7 @@
 OptStructArray::OptStructArray(size_t size)
 :
     d_n(size),
-    d_opt(new OptStruct[size])
+    d_opt(new OptStruct[size + 1]{})
 {
-    d_opt[size - 1] = OptStruct{0, 0, 0, 0};       // last element filled with zeroes
+    d_opt[size] = OptStruct{0, 0, 0, 0};       // last element filled with zeroes
 }

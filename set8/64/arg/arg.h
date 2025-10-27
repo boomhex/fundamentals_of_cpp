@@ -69,7 +69,7 @@ class Arg
         std::string makeBasename(char *basepath)    const;
         void parse(char const *optstring, LongOption const *const begin,
             LongOption const *const end, int argc, char **argv);
-        void parseOpts(OptStructArray lopts, LongOption const *const begin,
+        void parseOpts(OptStructArray &lopts, LongOption const *const begin,
             LongOption const *const end);
         int longOptionSize(LongOption const *const begin,
             LongOption const *const end)    const;

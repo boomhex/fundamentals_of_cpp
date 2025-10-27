@@ -1,6 +1,6 @@
 descr1.txt
 strings/strings.h
--strings/strings.ih
+strings/strings.ih
 strings/move.cc
 strings/moveassign.cc
 strings/copy.cc

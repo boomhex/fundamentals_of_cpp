@@ -18,4 +18,5 @@ int main(int argc, char **argv)
     Arg &arg = Arg::initialize("df:hv", 
                     longOptions, longEnd, argc, argv);
     std::cout << arg.basename() << '\n';
+    std::cout << arg.option('f') << '\n';
 }
