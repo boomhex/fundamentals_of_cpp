@@ -1,1 +1,7 @@
-d
+This program defines an unrestricted union named Data, capable of storing one
+of three field types: a pointer to an array of ten double values, a 
+std::string, or a size_t. The fields are privately stored and accessed 
+through dedicated constructors and accessor functions to ensure safe type 
+management. The class includes specialized destroy, copy, move, and swap 
+operations, all implemented using static arrays of member function pointers
+for efficient dispatch. 
