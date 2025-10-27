@@ -3,17 +3,21 @@
 void Arg::parse(char const *optstring, LongOption const *const begin,
             LongOption const *const end, int argc, char **argv)
 {
-    OptStruct *longOpts{};
-    longOpts = parseOpts(begin, end);
+    cout << "reaches\n";
+    size_t lOoptsSize = begin - end;
+    OptStructArray lOpts(lOoptsSize);
+    cout << "reaches1\n";
+    parseOpts(lOpts, begin, end);
 
+    cout << "reaches2\n";
     int longidx;
     longidx = -1;
     int c;
-    while ((c = getopt_long(argc, argv, optstring, longOpts, &longidx)) != -1)
+    while ((c = getopt_long(argc, argv, optstring, lOpts.get(), &longidx)) != -1)
     {
         if (c == 0)
         { // long-only option (no short synonym)
-            if (longOpts and longidx >= 0)
+            if (lOoptsSize and longidx >= 0)
             {
                 // record by its long name; your ArgLongOption reads optarg
                 d_longoption.add(begin[longidx].name());
@@ -36,6 +40,5 @@ void Arg::parse(char const *optstring, LongOption const *const begin,
             break;
         }
     }
-
-    delete[] longOpts;
+    remainingArgs(optind, argc, argv);
 }

@@ -2,7 +2,7 @@
 
 char const *Arg::arg(unsigned idx)    const
 {
-    if (idx > d_nArgs)
+    if (idx >= d_nArgs)
     {
         cerr << "Invalid idx requested\n";
         return "\0";
