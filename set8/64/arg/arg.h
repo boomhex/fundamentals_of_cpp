@@ -1,10 +1,15 @@
-#ifndef _INCLUDED_ARG_
-#define _INCLUDED_ARG_
+#ifndef INCLUDED_ARG_
+#define INCLUDED_ARG_
 
-#include "./../argoption/argoption.h"
-#include "./../arglongoption/arglongoption.h"
+#include "../argoption/argoption.h"
+#include "../arglongoption/arglongoption.h"
+#include "../optstructarray/optstructarray.h"
 
 #include <string>
+#include <iosfwd>
+#include <getopt.h>
+#include <string>
+using OptStruct = option;
 
 class Arg
 {
@@ -15,18 +20,22 @@ class Arg
         Optional
     };
 
-    char const *d_optstring;
-    size_t d_nOptions;
+    std::string const d_optString;
+    ArgOption d_shortoption;
+    ArgLongOption d_longoption;
+    size_t d_longOnlyCount;
     size_t d_nArgs;
+    std::string *d_args;
+    std::string d_basename;
 
-    static Arg *s_instance;
-    static bool s_initialized;
+
+    inline static Arg *s_instance = 0;
+    inline static bool s_initialized = false;
 
     public:
+        Arg(Arg const &other) = delete;
         class LongOption;
 
-
-        // Part of singleton:::
         static Arg &initialize(char const *optstring,   // 1.cc
             int argc, char **argv);
         static Arg &initialize(char const *optstring,   // 2.cc
@@ -34,9 +43,9 @@ class Arg
             LongOption const *const end,
             int argc, char **argv);
 
-        Arg &instance();
+        Arg const &instance();
 
-        char const *arg(unsigned idx) const;
+        char const *arg(unsigned idx) const;            // 3.cc
 
         std::string const &basename() const;
 
@@ -55,6 +64,19 @@ class Arg
         Arg(char const *optstring, int argc, char **argv);      // 1.cc
         Arg(char const *optstring, LongOption const *const begin,   // 2.cc
             LongOption const *const end, int argc, char **argv);
+        ~Arg();                                                     // 4.cc
+
+        std::string makeBasename(char *basepath)    const;
+        void parse(char const *optstring, LongOption const *const begin,
+            LongOption const *const end, int argc, char **argv);
+        OptStruct *parseOpts(LongOption const *const begin,
+            LongOption const *const end);
+        int longOptionSize(LongOption const *const begin,
+            LongOption const *const end)    const;
+        void copyToOptStruct(OptStruct *opts,
+            LongOption const *const begin, size_t idx)      const;
+        void remainingArgs(size_t optind, size_t argc, char **argv);
+
 };
 
 class Arg::LongOption
@@ -66,6 +88,10 @@ class Arg::LongOption
     public:
         LongOption(char const *name, Arg::Type type = Arg::None);
         LongOption(char const *name, int optionChar);
+
+        char const *name()  const;
+        Arg::Type type()    const;
+        int shortoption()   const;
 };
 
 #endif

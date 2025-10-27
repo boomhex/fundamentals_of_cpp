@@ -1,5 +1,6 @@
 #include "arg.h"
 
+#include "libgen.h"
 #include <iostream>
 
 using namespace std;

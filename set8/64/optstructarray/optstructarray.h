@@ -6,7 +6,7 @@
 
 class OptStructArray
 {
-    typedef struct option  OptStruct;
+    typedef struct option OptStruct;
 
     size_t    d_n;
     OptStruct *d_opt;

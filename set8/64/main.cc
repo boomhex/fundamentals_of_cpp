@@ -1,4 +1,5 @@
 #include "main.ih"
+#include <string>
 
 namespace
 {
@@ -9,7 +10,7 @@ namespace
         Arg::LongOption{"help", 'h'},
         Arg::LongOption{"version", 'v'},
     };
-    auto longEnd = longEnd = longOptions + std::size(longOptions);
+    auto longEnd = longOptions + std::size(longOptions);
 }
 
 int main(int argc, char **argv)
@@ -17,5 +18,5 @@ int main(int argc, char **argv)
     Arg &arg = Arg::initialize("df:hv", 
                     longOptions, longEnd, argc, argv);
 
-    // code using arg, etc.
+    std::cout << arg.option("fv") << '\n';
 }

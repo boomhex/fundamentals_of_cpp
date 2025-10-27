@@ -1,0 +1,4 @@
+A flaw in the class design is that the naming of the members clashes with
+already used naming. option is the name of the struct that is used in 
+getopt.h where options are stored. A fix is using a new namespace for the
+struct.
