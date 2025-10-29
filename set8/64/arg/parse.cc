@@ -8,10 +8,12 @@ void Arg::parse(char const *optstring, LongOption const *const begin,
     parseOpts(lOpts, begin, end);   // Parse long options to fit in structs
     int longidx;
     longidx = -1;
-    int c;
-    while ((c = getopt_long(argc, argv, optstring, lOpts.get(), &longidx)) != -1)
+    int ch;
+    while ((ch = getopt_long(argc, argv, optstring, lOpts.get(), &longidx)) != -1)
     {
-        if (c == 0)
+        if (ch != 0)
+            addShort(ch, optopt);
+        else 
         { // long-only option
             if (lOptsSize and longidx >= 0)
             {
@@ -19,19 +21,6 @@ void Arg::parse(char const *optstring, LongOption const *const begin,
                 ++d_longOnlyCount;
             }
             continue;
-        }
-
-        switch (c)
-        {
-            case ':': // required argument
-            case '?': // unknown option
-                if (optopt != 0)
-                    d_shortoption.add(static_cast<unsigned char>(optopt));
-            break;
-
-            default:
-                d_shortoption.add(c);
-            break;
         }
     }
     remainingArgs(optind, argc, argv);

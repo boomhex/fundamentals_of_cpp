@@ -1,5 +1,0 @@
-#include "optstructarray.ih"
-
-OPTSTRUCTARRAY::
-{
-}

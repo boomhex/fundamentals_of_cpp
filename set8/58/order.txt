@@ -15,5 +15,5 @@ numbers/length.cc
 numbers/swap.cc
 numbers/safeat.cc
 main.cc
-descr2.cc
-main.out
+descr2.txt
+out.txt

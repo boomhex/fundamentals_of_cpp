@@ -8,8 +8,9 @@ strings/strings4.cc
 strings/strings5.cc
 strings/iterate.cc
 strings/add.cc
-strings/enlargeByCopy.cc
-strings/enlargeByMove.cc
+strings/enlargebycopy.cc
+strings/enlargebymove.cc
+strings/clear.cc
 strings/destroy.cc
 main.ih
 main.cc

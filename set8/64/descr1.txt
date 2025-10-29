@@ -1,0 +1,9 @@
+This program parses arguments, and creates a singleton object. It has members
+to return counts of arguments, the program basename and number of arguments
+and options passed. 
+
+A flaw in the class design is that the naming of the members clashes with
+already used naming. option is the name of the struct that is used in 
+getopt.h where options are stored. A fix is using a new namespace for the
+struct. I am not sure if this is the big flaw we are supposed to find, since
+it is not that big of a problem.

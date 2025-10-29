@@ -47,24 +47,22 @@ class Arg
 
         char const *arg(unsigned idx) const;            // 3.cc
 
-        std::string const &basename() const;
-
+        // std::string const &basename()   const;  // removed const bc compiler of
+                                        // mailhandler?
         size_t nArgs() const;   // non-option args
         size_t nOptions() const;    // number of options
 
         size_t option(int opt) const;                           // 1.cc
-        // Returns the number of provided options. If single character options (or their long option equivalents) 
-        // are multiply specified, then each specification is counted as one option (so -v -v counts as two options).
         size_t option(std::string const &options) const;        // 2.cc
         size_t option(std::string *value, int option) const;    // 3.cc
         size_t option(std::string *value,                       // 4.cc
-            char const *longOption) const; 
+                      char const *longOption) const; 
 
     private:
         Arg(char const *optstring, int argc, char **argv);      // 1.cc
         Arg(char const *optstring, LongOption const *const begin,   // 2.cc
             LongOption const *const end, int argc, char **argv);
-        ~Arg();                                                     // 4.cc
+        ~Arg();                                                    
 
         std::string makeBasename(char *basepath)    const;
         void parse(char const *optstring, LongOption const *const begin,
@@ -76,7 +74,7 @@ class Arg
         void copyToOptStruct(OptStruct *opts,
             LongOption const *const begin, size_t idx)      const;
         void remainingArgs(size_t optind, size_t argc, char **argv);
-
+        void addShort(int ch, int optopt);
 };
 
 class Arg::LongOption

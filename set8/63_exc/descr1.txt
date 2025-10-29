@@ -1,0 +1,14 @@
+This program wraps an unrestricted union (Data) in a value-type class that 
+stores a tag to track which union arm is active. The wrapper handles all 
+construction, destruction, copy/move, and swap logic so resources (the 
+10-double array or std::string) are managed safely and leak-free. It offers 
+constructors for size_t, std::string, and a 10-double array, plus read-only 
+accessors to observe the current value and a method to query the active type.
+
+If you want to have a value of 0 in the wrap class, then you cn use 2 methods
+to pervent a compilation error.
+    - use std::size_t{0}
+        * Wrap w1{ std::size_t{0} };
+    - use a variable of std:size_t
+        * std::size_t var = 0;
+        * Wrap w1{ var };
